@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Денис Родичев](https://up.htmlacademy.ru/adaptive-individual/2/user/2564453).
-* Наставник: `Вадим Рахманов`.
+* Наставник: [Вадим Рахманов](https://htmlacademy.ru/profile/flander).
 
 ---
 
