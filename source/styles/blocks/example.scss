@@ -1,0 +1,39 @@
+.example {
+  background-color: $base-accent-color-background;
+}
+
+.example__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.example__desc {
+  font-size: 14px;
+  line-height: 18px;
+  color: $base-color-text;
+}
+
+.example__results-difference,
+.example__results-time {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__results-change,
+.example__results-spent {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
+  color: $base-color-text;
+}
+
+.example__spending-money {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  display: block;
+  text-align: center;
+}
