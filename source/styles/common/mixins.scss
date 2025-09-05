@@ -7,3 +7,9 @@
     font-display: swap;
   }
 }
+
+@mixin visually-hidden-core {
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
