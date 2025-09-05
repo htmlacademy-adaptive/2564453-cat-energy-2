@@ -1,19 +1,25 @@
-.footer__invite {
+.catalog__list {
+  list-style: none;
+}
+
+.catalog__more-title {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
 }
 
-.footer__address {
-  font-style: normal;
-  line-height: 20px;
+.catalog__more-desc {
+  font-size: 12px;
+  line-height: 16px;
   color: $base-color-text;
 }
 
-.footer__copyright {
+.catalog__more-show {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 20px;
+  text-transform: uppercase;
   color: $base-color-text;
+  background-color: $base-accent-color-background;
 }
