@@ -203,18 +203,6 @@
   border-collapse: collapse;
 }
 
-.sub-products__table tbody tr {
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 280px;
-  justify-content: space-between;
-}
-
-td.sub-products__desc,
-td.sub-products__price {
-  padding: 0;
-}
-
 .sub-products__link-order {
   font-family: "Oswald", sans-serif;
   font-size: 16px;

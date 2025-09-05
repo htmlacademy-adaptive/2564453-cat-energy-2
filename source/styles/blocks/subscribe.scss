@@ -122,7 +122,8 @@
   font-size: 20px;
   text-transform: uppercase;
   color: $base-color-text;
-  border: 1px solid $base-color-border-input;
+  border: 1px solid $base-color-border;
+  width: 280px;
   padding: 12px;
 
   @media screen and (min-width: $tablet-width) {
