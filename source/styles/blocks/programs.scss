@@ -1,3 +1,5 @@
+@use "../common/variables.scss" as *;
+
 .programs__list {
   list-style: none;
 }
@@ -7,7 +9,7 @@
 }
 
 .programs__list-title {
-  font-family: "Oswald", serif;
+  font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
@@ -21,6 +23,7 @@
 }
 
 .programs__list-link {
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   color: inherit;
   text-transform: uppercase;

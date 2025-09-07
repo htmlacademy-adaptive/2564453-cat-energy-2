@@ -1,4 +1,4 @@
-@use "common/mixins.scss";
+@use "../common/mixins" as *;
 
 .visually-hidden {
   position: absolute;
