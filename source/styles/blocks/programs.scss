@@ -1,38 +1,4 @@
 @use "../common/variables.scss" as *;
-@use "../common/mixins.scss" as *;
-
-.programs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media screen and (min-width: 768px) {
-    padding: 0 30px;
-    margin-bottom: 45px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    padding: 82px 110px 0;
-    margin-bottom: 71px;
-    align-items: center;
-  }
-}
-
-.programs__wrapper {
-  max-width: 320px;
-  padding: 0 20px 20px;
-
-  @media screen and (min-width: 768px) {
-    min-width: 708px;
-    padding: 0;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 
 .programs__list {
   list-style: none;
@@ -177,6 +143,7 @@
 }
 
 .programs__list-link {
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   color: inherit;
   text-transform: uppercase;

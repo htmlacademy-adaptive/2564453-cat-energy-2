@@ -1,41 +1,5 @@
 @use "../common/variables.scss" as *;
 
-.how-it-works {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 49px;
-
-  @media screen and (min-width: $tablet-width) {
-    padding: 0 30px 47px;
-    margin-bottom: 45px;
-    border-bottom: 1px solid $decoration-line-menu;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    padding: 0 106px 69px 110px;
-    margin: 0;
-    border-bottom: none;
-  }
-}
-
-.how-it-works__wrapper {
-  max-width: 280px;
-
-  @media screen and (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-    max-width: 708px;
-    padding-right: 75px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    min-width: 1220px;
-    padding-right: 0;
-    justify-content: space-between;
-  }
-}
-
 .how-it-works__title {
   font-family: "Oswald", sans-serif;
   font-size: 36px;

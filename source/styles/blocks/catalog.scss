@@ -1,42 +1,4 @@
 @use "../common/variables.scss" as *;
-@use "../common/mixins.scss" as *;
-
-.catalog {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 25px;
-
-  @media screen and (min-width: $tablet-width) {
-    margin-bottom: 74px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    margin-bottom: 71px;
-  }
-}
-
-.catalog__wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 100%;
-  place-items: center center;
-
-  @media screen and (min-width: $tablet-width) {
-    padding: 0 30px;
-    align-items: end;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
-    max-width: 768px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    padding: 0 110px;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1440px;
-    gap: 80px;
-  }
-}
 
 .catalog__list {
   list-style: none;

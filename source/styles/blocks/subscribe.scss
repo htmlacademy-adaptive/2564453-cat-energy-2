@@ -1,40 +1,4 @@
 @use "../common/variables.scss" as *;
-@use "../common/mixins.scss" as *;
-
-.subscribe {
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
-
-  @media screen and (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-    padding: 80px 30px;
-    margin-bottom: 0;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    padding: 0;
-    margin-bottom: 104px;
-  }
-}
-
-.subscribe__wrapper {
-  display: flex;
-  flex-direction: column;
-  max-width: 320px;
-
-  @media screen and (min-width: $tablet-width) {
-    max-width: 708px;
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    min-width: 1440px;
-    padding: 0 70px;
-  }
-}
 
 .subscribe__title {
   font-family: "Oswald", sans-serif;
