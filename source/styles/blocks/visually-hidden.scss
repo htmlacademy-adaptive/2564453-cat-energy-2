@@ -1,3 +1,5 @@
+@use "common/mixins.scss";
+
 .visually-hidden {
   position: absolute;
   width: 1px;
