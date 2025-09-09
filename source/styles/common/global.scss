@@ -1,7 +1,13 @@
+@use "../common/mixins" as *;
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.visually-hidden {
+  @include visually-hidden-core;
 }
 
 body {
