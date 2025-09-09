@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  @include visually-hidden-core;
+}
+
 body {
   font-family: "Lato", "arial", sans-serif;
   font-size: 14px;
