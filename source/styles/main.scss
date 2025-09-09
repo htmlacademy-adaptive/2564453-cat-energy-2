@@ -1,0 +1,24 @@
+/* GLOBAL */
+@forward "common/variables.scss";
+@forward "common/mixins.scss";
+@forward "common/fonts.scss";
+@forward "common/global.scss";
+
+/* BLOCKS index */
+@forward "blocks/page.scss";
+@forward "blocks/main-header.scss";
+@forward "blocks/main-navigation.scss";
+@forward "blocks/page-content.scss";
+@forward "blocks/hero.scss";
+@forward "blocks/programs.scss";
+@forward "blocks/how-it-works.scss";
+@forward "blocks/example.scss";
+@forward "blocks/demonstration.scss";
+@forward "blocks/footer.scss";
+@forward "blocks/social-list.scss";
+
+/* Catalog */
+@forward "blocks/catalog.scss";
+@forward "blocks/list-item.scss";
+@forward "blocks/sub-products.scss";
+@forward "blocks/subscribe.scss";
