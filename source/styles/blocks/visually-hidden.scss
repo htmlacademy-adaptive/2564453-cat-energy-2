@@ -1,12 +1,5 @@
 @use "../common/mixins" as *;
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-
   @include visually-hidden-core;
 }
