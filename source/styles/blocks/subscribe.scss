@@ -1,0 +1,35 @@
+.subscribe__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.subscribe__desc {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.subscribe__field-email {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $base-color-text;
+  border: 1px solid $base-color-border;
+  width: 280px;
+  padding: 12px;
+}
+
+.subscribe__form-button {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  color: $base-accent-color-text;
+  background-color: $base-color-background;
+  text-transform: uppercase;
+  border: none;
+  padding: 15px 30px;
+}

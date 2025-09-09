@@ -1,0 +1,30 @@
+.hero {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  color: $base-accent-color-text;
+}
+
+.hero__title,
+.hero__desc,
+.hero__nutrition-program {
+  background-color: $base-color-background;
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.hero__desc {
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.hero__nutrition-program {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $base-accent-color-text;
+}
