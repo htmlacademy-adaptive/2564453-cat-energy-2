@@ -1,4 +1,5 @@
 @use "../common/variables.scss" as *;
+@use "../common/mixins.scss" as *;
 
 .programs__list {
   list-style: none;
@@ -21,69 +22,18 @@
 .programs__list-item {
   background-color: $base-accent-color-background;
   position: relative;
-  padding: 21px 33px 18px 20px;
-
-  @media screen and (min-width: 768px) {
-    padding: 77px 63px 53px 52px;
-    min-width: 708px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    padding: 77px 61px 55px 52px;
-    min-width: 570px;
-  }
 }
 
 .programs__list-item--weight-loss::after {
   content: "";
   background-image: url("../../icons/cat-black.svg");
   background-repeat: no-repeat;
+  background-size: 50px 53px;
   width: 50px;
   height: 53px;
   position: absolute;
-  top: 21px;
-  left: 20px;
-
-  @media screen and (min-width: $tablet-width) {
-    width: 200px;
-    height: 211px;
-    top: 81px;
-    left: auto;
-    right: 63px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    width: 100px;
-    height: 106px;
-    top: 41px;
-    left: 52px;
-  }
-}
-
-.programs__list-item--weight-gain::after {
-  content: "";
-  background-image: url("../../icons/cat-black-walk.svg");
-  background-repeat: no-repeat;
-  width: 67px;
-  height: 50px;
-  position: absolute;
-  top: 24px;
-  left: 13px;
-
-  @media screen and (min-width: $tablet-width) {
-    width: 268px;
-    height: 200px;
-    top: 91px;
-    left: auto;
-    right: 29px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    width: 134px;
-    height: 100px;
-    top: 47px;
-    left: 33px;
-  }
+  top: 0;
+  left: 0;
 }
 
 .programs__list-title {
@@ -117,29 +67,9 @@
   line-height: 18px;
   color: $base-color-text;
   position: relative;
-  margin: 0 0 14px;
   padding-bottom: 24px;
 
   @include decorative-line();
-
-  @media screen and (min-width: $tablet-width) {
-    margin: 0 0 48px;
-    padding: 0;
-    max-width: 340px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  @media screen and (min-width: $tablet-width) {
-    &::after {
-      content: none;
-    }
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    margin: 0 0 23px;
-    max-width: 457px;
-  }
 }
 
 .programs__list-link {
@@ -147,39 +77,49 @@
   font-size: 16px;
   color: inherit;
   text-transform: uppercase;
+  display: flex;
   align-items: center;
-  display: inline-block;
-  position: relative;
-  padding-right: 47px;
-
-  @include arrow-condition;
-
-  @media screen and (min-width: 768px) {
-    font-size: 20px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
+  gap: 15px;
 }
 
-.programs__list-link::before {
+.programs__list-arrow {
+  position: relative;
+  width: 24px;
+  height: 12px;
+  display: inline-block;
+}
+
+.programs__list-arrow::before {
   content: "";
   position: absolute;
   top: 50%;
-  right: 15px;
+  left: 0;
   width: 18px;
   height: 2px;
-  background-color: $icon-basic-black;
+  background-color: #000000;
   transform: translateY(-50%);
 }
 
-.programs__list-link::after {
+.programs__list-arrow::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 7px;
+  right: 0;
   width: 9px;
-  height: 12px;
+  height: 9px;
   background-color: $icon-basic-black;
   clip-path: polygon(0 0, 100% 50%, 0 100%);
   transform: translateY(-50%);
+}
+
+.programs__list-item--weight-gain::after {
+  content: "";
+  background-image: url("../../icons/cat-black-walk.svg");
+  background-repeat: no-repeat;
+  background-size: 67px 50px;
+  width: 67px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

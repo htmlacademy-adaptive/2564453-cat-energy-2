@@ -2,18 +2,13 @@
 
 .demonstration {
   position: relative;
+  width: 100%;
   max-width: 560px;
   margin: 0 auto;
+  overflow: hidden;
   opacity: 0;
   animation: fadeIn 0.6s ease-out forwards;
-  overflow: visible;
-
-  @media screen and (min-width: $desktop-width) {
-    margin: 0;
-    margin-bottom: 10px;
-  }
 }
-
 
 .demonstration__demonstration-image {
   display: block;
@@ -38,7 +33,6 @@
 }
 
 /* Стили для ползунка */
-
 .demonstration__slider {
   position: absolute;
   top: 0;
@@ -50,37 +44,6 @@
   transform: translateX(-50%);
   z-index: 3;
   border-radius: 2px;
-
-  &:hover,
-  &:active {
-    background-color: $base-color-background;
-
-    &::before {
-      border-color: $base-color-background;
-    }
-
-    &::after {
-      color: $base-color-background;
-    }
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-
-  @media (max-width: $desktop-width) {
-    &:active {
-      background-color: $base-color-background;
-
-      &::before {
-        border-color: $base-color-background;
-      }
-
-      &::after {
-        color: $base-color-background;
-      }
-    }
-  }
 }
 
 .demonstration__slider::before {
@@ -94,6 +57,7 @@
   border: 2px solid $icon-background-color;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .demonstration__slider::after {
@@ -115,5 +79,5 @@
 
 .demonstration__slider:active::before {
   transform: translate(-50%, -50%) scale(0.95);
-  background-color: $icon-basic-grey;
+  background-color: #f8f8f8;
 }

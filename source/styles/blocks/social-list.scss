@@ -7,22 +7,8 @@
   flex-wrap: wrap;
   gap: 24px;
   padding-bottom: 20px;
-  padding-left: 0;
-  justify-content: center;
-  margin: 19px 0;
-  width: 100%;
 
-  @include decorative-line;
-
-  @media screen and (min-width: $tablet-width) {
-    max-width: 400px;
-    margin: 0;
-    padding: 8px 12px 7px;
-
-    &::after {
-      content: none;
-    }
-  }
+  @include decorative-line(280px);
 }
 
 .social-list__link {
@@ -31,18 +17,7 @@
   min-width: 28px;
   min-height: 22px;
   display: block;
-  background-color: $icon-background-color;
-
-  &:hover,
-  &:focus {
-    filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(380%) hue-rotate(60deg) brightness(95%) contrast(90%);
-    transition: all 0.2s ease;
-  }
-
-  &:active {
-    opacity: 0.3;
-    transition: all 0.3s ease;
-  }
+  background-color: #666666;
 }
 
 .social-list__link--vk {

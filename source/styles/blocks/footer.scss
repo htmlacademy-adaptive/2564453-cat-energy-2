@@ -1,4 +1,5 @@
 @use "../common/variables.scss" as *;
+@use "../common/mixins.scss" as *;
 
 .footer__invite {
   font-family: "Oswald", sans-serif;
@@ -177,84 +178,27 @@
   font-size: 16px;
   line-height: 20px;
   color: $base-color-text;
+  max-width: 280px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 280px;
-
-  @media screen and (min-width: $tablet-width) {
-    min-width: 168px;
-  }
-
-  &:hover,
-  &:focus {
-    &::after {
-      filter: brightness(0) saturate(100%) invert(55%) sepia(96%) saturate(368%) hue-rotate(61deg) brightness(97%) contrast(87%);
-      transition: all 0.2s ease;
-    }
-  }
-
-  &:active {
-    opacity: 0.3;
-    transition: all 0.2s ease;
-  }
-}
-/* карты */
-
-.footer__map-container {
-  position: relative;
-  width: 100%;
-  height: 362px; /* ФИКСИРОВАННАЯ высота для мобильной версии */
-
-  @media screen and (min-width: $tablet-width) {
-    height: 400px; /* ФИКСИРОВАННАЯ высота для планшета */
-  }
 }
 
-/* Основная карта */
+.footer__logo {
+  display: block;
+  padding-bottom: 20px;
 
-.footer__map {
-  position: relative;
-  border: none;
-  z-index: 2;
-  width: 100%;
-  height: 362px;
-
-  @media screen and (min-width: $tablet-width) {
-    height: 400px;
-  }
+  @include decorative-line(280px);
 }
 
-/* Fallback для карты */
-
-.footer__map-fallback {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  z-index: 1;
-  overflow: hidden;
-}
-
-/* Изображение fallback с сохранением пропорций */
-
-.footer__map-fallback-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Показываем fallback при ошибке */
-
-.footer__map-container--error .footer__map-fallback {
+.footer__copyright::after {
+  content: "";
+  width: 27px;
+  height: 34px;
+  background-repeat: no-repeat;
+  background-color: $icon-background-color;
+  mask-image: url("../../icons/html-academy.svg");
+  mask-size: 27px 34px;
   display: block;
 }
 
-/* Скрываем карту при ошибке */
-
-.footer__map-container--error .footer__map {
-  display: none;
-}

@@ -4,34 +4,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.main-navigation__toggle');
   const menuList = document.querySelector('.main-navigation__list');
 
+
   if (toggleButton && menuList) {
-    toggleButton.addEventListener('click', () => {
-      toggleButton.classList.toggle('active');
+    toggleButton.addEventListener('click', function() {
+
+      this.classList.toggle('active');
       menuList.classList.toggle('main-navigation__list--open');
 
-      const isExpanded = toggleButton.classList.contains('active');
-      toggleButton.setAttribute('aria-expanded', isExpanded);
+      const isExpanded = this.classList.contains('active');
+      this.setAttribute('aria-expanded', isExpanded);
       menuList.setAttribute('aria-hidden', !isExpanded);
     });
   }
+});
 
+document.addEventListener('DOMContentLoaded', () => {
   const demonstrationBlock = document.querySelector('.demonstration');
   const beforeImage = demonstrationBlock.querySelector('.demonstration__demonstration-image--before');
   const afterImage = demonstrationBlock.querySelector('.demonstration__demonstration-image--after');
   const slider = demonstrationBlock.querySelector('.demonstration__slider');
   let isMoving = false;
 
-  const setSliderPosition = (percentage) => {
-    slider.style.left = `${percentage}%`;
-
-    beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
-
-    afterImage.style.clipPath = `polygon(${percentage}% 0, 100% 0, 100% 100%, ${percentage}% 100%)`;
-
-    slider.setAttribute('aria-valuenow', Math.round(percentage));
-  };
-
-  const updateSliderPosition = (clientX) => {
+  function updateSliderPosition(clientX) {
     const demonstrationRect = demonstrationBlock.getBoundingClientRect();
     let relativeX = clientX - demonstrationRect.left;
 
@@ -40,7 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const percentage = (relativeX / demonstrationRect.width) * 100;
 
     setSliderPosition(percentage);
-  };
+  }
+
+  function setSliderPosition(percentage) {
+    slider.style.left = `${percentage}%`;
+
+    beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+
+    afterImage.style.clipPath = `polygon(${percentage}% 0, 100% 0, 100% 100%, ${percentage}% 100%)`;
+
+    slider.setAttribute('aria-valuenow', Math.round(percentage));
+  }
 
   setSliderPosition(50);
 
@@ -80,17 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
     }
   }, { passive: false });
-
-  const mapContainer = document.querySelector('.footer__map-container');
-  const iframe = mapContainer.querySelector('.footer__map');
-
-  iframe.addEventListener('load', () => {
-    iframe.dataset.loaded = 'true';
-  });
-
-  setTimeout(() => {
-    if (!iframe.dataset.loaded) {
-      mapContainer.classList.add('footer__map-container--error');
-    }
-  }, 4000);
 });
