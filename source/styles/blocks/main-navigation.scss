@@ -1,3 +1,9 @@
+@use "../common/variables.scss" as *;
+
+.main-navigation__link {
+  color: inherit;
+}
+
 .main-navigation__list {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
@@ -6,6 +12,106 @@
   list-style: none;
 }
 
-.main-navigation__link {
-  color: inherit;
+@media (max-width: 767px) {
+  .main-navigation__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: $base-accent-color-text;
+    z-index: 1000;
+    padding: 25px 20px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+  }
+
+  .main-navigation__list--open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  .main-navigation__link {
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+}
+
+/* Стили гамбургера/крестика */
+.main-navigation__toggle {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.main-navigation__toggle-icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: $icon-basic-black;
+  position: relative;
+  transition: all 0.3s ease;
+  top: 11px;
+}
+
+.main-navigation__toggle-icon::before,
+.main-navigation__toggle-icon::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: $icon-basic-black;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.main-navigation__toggle-icon::before {
+  top: -8px;
+}
+
+.main-navigation__toggle-icon::after {
+  top: 8px;
+}
+
+.main-navigation__toggle.active .main-navigation__toggle-icon {
+  background-color: transparent;
+  transform: scale(0.75);
+}
+
+.main-navigation__toggle.active .main-navigation__toggle-icon::before {
+  transform: rotate(45deg) translate(6px, 6px);
+  width: 18px;
+}
+
+.main-navigation__toggle.active .main-navigation__toggle-icon::after {
+  transform: rotate(-45deg) translate(6px, -6px);
+  width: 18px;
+}
+
+/* На десктопе */
+@media (min-width: 768px) {
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation__list {
+    display: flex;
+    gap: 33px;
+    position: static;
+    background: none;
+    padding: 0;
+  }
 }

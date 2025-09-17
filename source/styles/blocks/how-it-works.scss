@@ -11,4 +11,44 @@
   list-style: none;
   line-height: 18px;
   color: $base-color-text;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.how-it-works__list-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.how-it-works__list-item::before {
+  content: "";
+  background-color: $base-color-background;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.how-it-works__list-item--functional-nutrition::before {
+  background-image: url("../../icons/leaf.svg");
+  background-size: 30px 32px;
+}
+
+.how-it-works__list-item--release-form::before {
+  background-image: url("../../icons/mixture.svg");
+  background-size: 26px 29px;
+}
+
+.how-it-works__list-item--meal::before {
+  background-image: url("../../icons/knife-and-fork.svg");
+  background-size: 25px 30px;
+}
+
+.how-it-works__list-item--timing::before {
+  background-image: url("../../icons/clock.svg");
+  background-size: 26px 31px;
 }
