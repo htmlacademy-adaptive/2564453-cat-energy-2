@@ -1,4 +1,5 @@
 @use "../common/variables.scss" as *;
+@use "../common/mixins.scss" as *;
 
 .programs__list {
   list-style: none;
@@ -6,6 +7,19 @@
 
 .programs__list-item {
   background-color: $base-accent-color-background;
+  position: relative;
+}
+
+.programs__list-item--weight-loss::after {
+  content: "";
+  background-image: url("../../icons/cat-black.svg");
+  background-repeat: no-repeat;
+  background-size: 50px 53px;
+  width: 50px;
+  height: 53px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .programs__list-title {
@@ -20,6 +34,10 @@
 .programs__list-desc {
   line-height: 18px;
   color: $base-color-text;
+  position: relative;
+  padding-bottom: 24px;
+
+  @include decorative-line();
 }
 
 .programs__list-link {
@@ -27,4 +45,31 @@
   font-size: 16px;
   color: inherit;
   text-transform: uppercase;
+  align-items: center;
+  display: inline-block;
+  position: relative;
+  padding-right: 47px;
+}
+
+.programs__list-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 18px;
+  height: 2px;
+  background-color: $icon-basic-black;
+  transform: translateY(-50%);
+}
+
+.programs__list-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  width: 9px;
+  height: 12px;
+  background-color: $icon-basic-black;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  transform: translateY(-50%);
 }

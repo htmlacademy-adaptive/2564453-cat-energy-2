@@ -1,3 +1,9 @@
+@use "../common/variables.scss" as *;
+
+.main-navigation__link {
+  color: inherit;
+}
+
 .main-navigation__list {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
@@ -6,6 +12,41 @@
   list-style: none;
 }
 
-.main-navigation__link {
-  color: inherit;
+/* Стили гамбургера */
+.main-navigation__toggle {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.main-navigation__toggle-icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: $icon-basic-black;
+  position: relative;
+  transition: all 0.3s ease;
+  top: 11px;
+}
+
+.main-navigation__toggle-icon::before,
+.main-navigation__toggle-icon::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: $icon-basic-black;
+  left: 0;
+}
+
+.main-navigation__toggle-icon::before {
+  top: -8px;
+}
+
+.main-navigation__toggle-icon::after {
+  top: 8px;
 }

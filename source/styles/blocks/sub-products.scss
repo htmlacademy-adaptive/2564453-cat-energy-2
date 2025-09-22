@@ -35,9 +35,23 @@
 }
 
 .sub-products__gift-desc {
+  display: block;
   font-size: 16px;
   line-height: 20px;
   color: $base-accent-color-text;
   background-color: $base-color-background;
   text-align: center;
+  position: relative;
+  padding-top: 60px;
+}
+
+.sub-products__gift-desc::before {
+  content: "";
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 80px;
+  background: url("../../icons/gift.svg") center/contain no-repeat;
 }

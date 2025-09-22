@@ -1,3 +1,5 @@
+@use "../common/variables.scss" as *;
+
 @mixin font-face($font-family, $font-weight, $font-src) {
   @font-face {
     font-family: $font-family;
@@ -18,4 +20,43 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+@mixin decorative-line($width: 240px) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $width;
+    height: 1px;
+    background-color: $decoration-line;
+  }
+}
+
+@mixin decorative-border($content: "снижение веса", $padding: 5px, $font-size: 12px, $line-height: 12px, $width: 77px) {
+  border: 1px solid $base-color-border;
+  border-radius: 3px;
+  position: relative;
+
+  &::before {
+    content: $content;
+    position: absolute;
+    padding: $padding;
+    background: $base-moreaccent-color-background;
+    font-family: "Lato", sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-transform: lowercase;
+    color: $base-color-text;
+    bottom: -22px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: $width;
+    text-align: center;
+  }
 }
