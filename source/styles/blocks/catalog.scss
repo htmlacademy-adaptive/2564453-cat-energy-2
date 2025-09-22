@@ -37,7 +37,7 @@
   width: 2px;
   height: 30px;
   background-color: $icon-basic-grey;
-  top: 8px; /* 23px - 15px (половина высоты крестика) */
+  top: 9px; /* 23px - 14px (половина высоты крестика с учетом отрисовки пикселей) */
   left: 50%;
   transform: translateX(-50%);
 }
