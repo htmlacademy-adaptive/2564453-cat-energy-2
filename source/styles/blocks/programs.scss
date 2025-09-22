@@ -45,49 +45,31 @@
   font-size: 16px;
   color: inherit;
   text-transform: uppercase;
-  display: flex;
   align-items: center;
-  gap: 15px;
-}
-
-.programs__list-arrow {
-  position: relative;
-  width: 24px;
-  height: 12px;
   display: inline-block;
+  position: relative;
+  padding-right: 47px;
 }
 
-.programs__list-arrow::before {
+.programs__list-link::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 0;
+  right: 15px;
   width: 18px;
   height: 2px;
-  background-color: #000000;
+  background-color: $icon-basic-black;
   transform: translateY(-50%);
 }
 
-.programs__list-arrow::after {
+.programs__list-link::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 7px;
   width: 9px;
-  height: 9px;
+  height: 12px;
   background-color: $icon-basic-black;
   clip-path: polygon(0 0, 100% 50%, 0 100%);
   transform: translateY(-50%);
-}
-
-.programs__list-item--weight-gain::after {
-  content: "";
-  background-image: url("../../icons/cat-black-walk.svg");
-  background-repeat: no-repeat;
-  background-size: 67px 50px;
-  width: 67px;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
