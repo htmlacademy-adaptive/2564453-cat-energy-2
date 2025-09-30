@@ -1,3 +1,39 @@
+@use "../common/variables.scss" as *;
+@use "../common/mixins.scss" as *;
+
 .social-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-bottom: 20px;
+
+  @include decorative-line(280px);
+}
+
+.social-list__link {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  min-width: 28px;
+  min-height: 22px;
+  display: block;
+  background-color: $icon-background-color;
+}
+
+.social-list__link--vk {
+  mask-image: url("../../icons/vk.svg");
+  mask-size: 28px 22px;
+  mask-repeat: no-repeat;
+}
+
+.social-list__link--you-tube {
+  mask-image: url("../../icons/you-tube.svg");
+  mask-size: 28px 22px;
+  mask-repeat: no-repeat;
+}
+
+.social-list__link--telegram {
+  mask-image: url("../../icons/telegram.svg");
+  mask-size: 28px 22px;
+  mask-repeat: no-repeat;
 }

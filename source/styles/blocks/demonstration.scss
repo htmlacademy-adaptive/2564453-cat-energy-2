@@ -1,3 +1,45 @@
+@use "../common/variables.scss" as *;
+
 .demonstration {
-  min-width: 280px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Стили для ползунка */
+.demonstration__slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: $icon-background-color;
+  cursor: ew-resize;
+  transform: translateX(-50%);
+  z-index: 3;
+  border-radius: 2px;
+}
+
+.demonstration__slider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: $base-accent-color-text;
+  border: 2px solid $icon-background-color;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.demonstration__slider::after {
+  content: "◄►";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: $icon-background-color;
+  font-size: 18px;
+  transform: translate(-50%, -50%);
+  cursor: grab;
 }

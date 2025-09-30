@@ -1,4 +1,5 @@
 @use "../common/variables.scss" as *;
+@use "../common/mixins.scss" as *;
 
 .footer__invite {
   font-family: "Oswald", sans-serif;
@@ -14,8 +15,30 @@
 }
 
 .footer__copyright {
-  font-family: "Oswald", sans-serif;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   color: $base-color-text;
+  max-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  display: block;
+  padding-bottom: 20px;
+
+  @include decorative-line(280px);
+}
+
+.footer__copyright::after {
+  content: "";
+  width: 27px;
+  height: 34px;
+  background-repeat: no-repeat;
+  background-color: $icon-background-color;
+  mask-image: url("../../icons/html-academy.svg");
+  mask-size: 27px 34px;
+  display: block;
 }

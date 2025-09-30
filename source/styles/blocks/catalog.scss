@@ -4,17 +4,49 @@
   list-style: none;
 }
 
+.catalog__more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .catalog__more-title {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  position: relative;
+  padding-top: 55px;
+  margin: 0 0 8px;
+}
+
+.catalog__more-title::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: $icon-basic-grey;
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.catalog__more-title::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  background-color: $icon-basic-grey;
+  top: 9px; /* 23px - 14px (половина высоты крестика с учетом отрисовки пикселей) */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .catalog__more-desc {
   font-size: 12px;
   line-height: 16px;
   color: $base-color-text;
+  margin: 0 0 21px;
 }
 
 .catalog__more-show {
@@ -22,6 +54,9 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
   color: $base-color-text;
   background-color: $base-accent-color-background;
+  width: 280px;
+  padding: 10px 40px;
 }
