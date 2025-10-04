@@ -3,20 +3,9 @@
 
 .programs__list {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-
-  @media screen and (min-width: 768px) {
-    gap: 30px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    gap: 80px;
-    justify-content: center;
-  }
 }
 
 .programs__list-item {
@@ -104,4 +93,44 @@
   background-color: $icon-basic-black;
   clip-path: polygon(0 0, 100% 50%, 0 100%);
   transform: translateY(-50%);
+}
+
+.programs__list-item--weight-gain::after {
+  content: "";
+  background-image: url("../../icons/cat-black-walk.svg");
+  background-repeat: no-repeat;
+  background-size: 67px 50px;
+  width: 67px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+  .programs__list-item--weight-gain::after {
+    background-size: 268px 200px;
+    width: 268px;
+    height: 200px;
+    top: 0;
+    left: auto;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+  .programs__list-item--weight-loss::after {
+    background-size: 200px 211px;
+    width: 200px;
+    height: 211px;
+    top: 0;
+    left: auto;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .programs__list-item {
+    width: 570px;
+  }
 }

@@ -4,83 +4,33 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: contents;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
 
-  @media screen and (min-width: $tablet-width) {
+@media (min-width: $tablet-width) {
+  .catalog__list {
     display: contents;
   }
 
-  @media screen and (min-width: $desktop-width) {
-    grid-template-columns: repeat(auto-fit, minmax(245px, 4fr));
-    gap: 80px;
-    justify-content: center;
-    margin: 0 auto;
+  .catalog__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 708px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__wrapper {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .catalog__item {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
+  width: 320px;
   padding: 20px 20px 25px;
-  border-top: 1px solid $decoration-line-menu;
-
-
-  @media screen and (min-width: $tablet-width) {
-    flex-direction: column;
-    position: relative;
-    justify-content: end;
-    border-top: none;
-    padding: 10px 37px 40px;
-    max-width: 324px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 81px 0 0;
-      background-color: $base-accent-color-background;
-      z-index: -1;
-    }
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    max-width: 245px;
-    padding: 0 38px 40px;
-  }
-}
-
-.catalog__item-wrapper {
-  max-width: 280px;
-  display: flex;
-  flex-wrap: wrap;
-
-  @media screen and (min-width: $tablet-width) {
-    flex-direction: column;
-  }
-}
-
-.catalog__more {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 25px 20px 24px;
-  width: 100%;
-  border-top: 1px solid $decoration-line-menu;
-  border-bottom: 1px solid $decoration-line-menu;
-
-  @media screen and (min-width: $tablet-width) {
-    max-width: 324px;
-    justify-content: flex-end;
-    padding: 48px 37px 38px;
-    border: 2px solid $base-accent-color-background;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    max-width: 245px;
-  }
 }
 
 .catalog__more {

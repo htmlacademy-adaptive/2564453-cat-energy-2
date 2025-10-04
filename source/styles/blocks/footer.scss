@@ -1,5 +1,15 @@
 @use "../common/variables.scss" as *;
 @use "../common/mixins.scss" as *;
+@use "../blocks/social-list.scss" as *;
+
+.footer__map {
+  width: 100%;
+  height: 362px;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
 
 .footer__invite {
   font-family: "Oswald", sans-serif;
@@ -173,20 +183,10 @@
   }
 }
 
-.footer__copyright {
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 20px;
-  color: $base-color-text;
-  max-width: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .footer__logo {
   display: block;
   padding-bottom: 20px;
+  text-align: center;
 
   @include decorative-line(280px);
 }
@@ -200,4 +200,44 @@
   mask-image: url("../../icons/html-academy.svg");
   mask-size: 27px 34px;
   display: block;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__wrapper--socials {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.footer__copyright {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: $base-color-text;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .footer__wrapper--socials {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-list::after,
+  .footer__logo::after {
+    content: none;
+  }
+
+  .footer__copyright {
+    width: 168px;
+  }
 }
