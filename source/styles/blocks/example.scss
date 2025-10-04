@@ -1,5 +1,6 @@
 @use "../common/variables.scss" as *;
 @use "../common/mixins.scss" as *;
+@use "../blocks/demonstration.scss" as *;
 
 .example {
   background-color: $base-moreaccent-color-background;
@@ -61,4 +62,27 @@
   padding: 14px 21px 17px;
 
   @include decorative-border($content: "затрачено времени");
+}
+
+@media screen and (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+  .example__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .example {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .example__wrapper {
+    width: 436px;
+  }
+
+  .demonstration {
+    width: 50%;/* для наглядности */
+  }
 }

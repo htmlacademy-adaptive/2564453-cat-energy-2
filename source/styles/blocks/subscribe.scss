@@ -35,3 +35,12 @@
   border: none;
   padding: 15px 30px;
 }
+
+.subscribe__form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
