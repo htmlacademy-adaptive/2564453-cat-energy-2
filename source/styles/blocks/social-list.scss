@@ -7,6 +7,8 @@
   flex-wrap: wrap;
   gap: 24px;
   padding-bottom: 20px;
+  padding-left: 0;
+  justify-content: center;
 
   @include decorative-line(280px);
 }

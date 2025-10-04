@@ -9,6 +9,7 @@
 
 .how-it-works__list {
   list-style: none;
+  padding-left: 0;
   line-height: 18px;
   color: $base-color-text;
   display: flex;
@@ -51,4 +52,52 @@
 .how-it-works__list-item--timing::before {
   background-image: url("../../icons/clock.svg");
   background-size: 26px 31px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .how-it-works__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 780px;
+    margin-left: 30px;
+  }
+
+  .how-it-works__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    counter-reset: step-counter;
+  }
+
+  .how-it-works__list-item {
+    position: relative;
+    margin-bottom: 30px;
+    counter-increment: step-counter;
+    width: 249px;
+    height: 280px;
+  }
+
+  .how-it-works__list-item::after {
+    content: counter(step-counter);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $base-accent-color-background;
+    font-size: 282px;
+    font-weight: 400;
+    line-height: 282px;
+    font-family: "Oswald", sans-serif;
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .how-it-works__wrapper {
+    width: 1220px;
+  }
+
+  .how-it-works__list {
+    flex-flow: row wrap;
+  }
 }
