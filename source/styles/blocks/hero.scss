@@ -36,7 +36,7 @@
   flex-direction: column;
 }
 
-@media (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+@media (min-width: $desktop-width) {
   picture {
     order: 10;
   }
@@ -46,33 +46,27 @@
   .hero__wrapper {
     position: relative;
     min-height: 500px;
-    max-width: 919px;
-  }
-
-  .hero__title,
-  .hero__desc,
-  .hero__nutrition-program {
-    display: block;
-    max-width: 500px;
+    max-width: 1000px;
+    padding: 81px;
   }
 
   .hero__title {
     margin: 0 0 40px;
-    width: 414px;
     font-size: 60px;
     line-height: 60px;
+    max-width: 450px;
   }
 
   .hero__desc {
     margin: 0  0 52px;
-    width: 283px;
     font-size: 20px;
     line-height: 20px;
+    max-width: 400px;
   }
 
   .hero__nutrition-program {
     margin-bottom: 0;
-    width: 244px;
+    max-width: 244px;
     font-size: 20px;
     line-height: 26px;
   }
@@ -80,7 +74,7 @@
   .hero__wrapper picture {
     position: absolute;
     right: 0;
-    top: -81px;
+    top: 0;
     width: auto;
   }
 }
@@ -90,5 +84,6 @@
   .hero__desc {
     color: $icon-basic-black;
     background-color: $base-accent-color-text;
+    text-align: start;
   }
 }
