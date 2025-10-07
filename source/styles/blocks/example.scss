@@ -95,7 +95,7 @@
   @include decorative-border($content: "затрачено времени");
 }
 
-@media screen and (min-width: $tablet-width) and (max-width: calc($desktop-width - 1px)) {
+@media screen and (min-width: $tablet-width) {
   .example__wrapper {
     display: flex;
     flex-flow: row wrap;
@@ -110,10 +110,6 @@
   }
 
   .example__wrapper {
-    width: 436px;
-  }
-
-  .demonstration {
-    width: 50%;/* для наглядности */
+    max-width: 436px;
   }
 }
