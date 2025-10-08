@@ -3,6 +3,9 @@
 
 .programs__list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .programs__list-item {
@@ -14,7 +17,6 @@
   content: "";
   background-image: url("../../icons/cat-black.svg");
   background-repeat: no-repeat;
-  background-size: 50px 53px;
   width: 50px;
   height: 53px;
   position: absolute;
@@ -72,4 +74,61 @@
   background-color: $icon-basic-black;
   clip-path: polygon(0 0, 100% 50%, 0 100%);
   transform: translateY(-50%);
+}
+
+.programs__list-item--weight-gain::after {
+  content: "";
+  background-image: url("../../icons/cat-black-walk.svg");
+  background-repeat: no-repeat;
+  width: 67px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .programs__list-item--weight-gain::after {
+    width: 268px;
+    height: 200px;
+    top: 0;
+    left: auto;
+    right: 0;
+  }
+
+  .programs__list-item--weight-loss::after {
+    width: 200px;
+    height: 211px;
+    top: 0;
+    left: auto;
+    right: 0;
+  }
+
+  .programs__list-item {
+    max-width: 708px;
+  }
+
+  .programs__list-desc::after {
+    content: none;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .programs__list-item--weight-gain::after {
+    width: 134px;
+    height: 100px;
+    top: 0;
+    left: 0;
+  }
+
+  .programs__list-item--weight-loss::after {
+    width: 100px;
+    height: 106px;
+    top: 0;
+    left: 0;
+  }
+
+  .programs__list-item {
+    max-width: 570px;
+  }
 }

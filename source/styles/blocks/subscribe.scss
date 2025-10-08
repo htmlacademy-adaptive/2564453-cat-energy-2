@@ -21,7 +21,7 @@
   text-transform: uppercase;
   color: $base-color-text;
   border: 1px solid $base-color-border;
-  width: 280px;
+  min-width: 280px;
   padding: 12px;
 }
 
@@ -34,4 +34,13 @@
   text-transform: uppercase;
   border: none;
   padding: 15px 30px;
+}
+
+.subscribe__form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
