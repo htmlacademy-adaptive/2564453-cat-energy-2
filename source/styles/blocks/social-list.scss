@@ -9,8 +9,16 @@
   padding-bottom: 20px;
   padding-left: 0;
   justify-content: center;
+  margin: 19px 0;
+  width: 100%;
 
-  @include decorative-line(280px);
+  @include decorative-line;
+
+  @media screen and (min-width: $tablet-width) {
+    max-width: 400px;
+    margin: 0;
+    padding: 8px 0 7px;
+  }
 }
 
 .social-list__link {

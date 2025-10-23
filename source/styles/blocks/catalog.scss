@@ -1,44 +1,111 @@
 @use "../common/variables.scss" as *;
 
+.catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 26px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 74px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 71px;
+  }
+}
+
+.catalog__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  align-items: center;
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    align-items: end;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 0 110px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .catalog__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-}
+  display: contents;
+  align-items: center;
 
-@media (min-width: $tablet-width) {
-  .catalog__list {
+
+  @media screen and (min-width: $tablet-width) {
     display: contents;
   }
 
-  .catalog__wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 708px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .catalog__wrapper {
-    grid-template-columns: repeat(4, 1fr);
+  @media screen and (min-width: $desktop-width) {
+    grid-template-columns: repeat(auto-fit, minmax(245px, 4fr));
+    gap: 80px;
+    justify-content: center;
+    margin: 0 auto;
   }
 }
 
 .catalog__item {
   display: flex;
   flex-wrap: wrap;
-  max-width: 320px;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-around;
   align-items: center;
   padding: 20px 20px 25px;
+  border-top: 3px solid $decoration-line-menu;
+
+
+  @media screen and (min-width: $tablet-width) {
+    flex-direction: column;
+    position: relative;
+    justify-content: end;
+    border-top: none;
+    padding: 29px 37px 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 81px 0 0;
+      background-color: $base-accent-color-background;
+      z-index: -1;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    max-width: 245px;
+    padding: 0 38px 40px;
+  }
 }
 
 .catalog__more {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 25px 20px 24px;
+  max-width: 100%;
+  border-top: 1px solid $decoration-line-menu;
+  border-bottom: 1px solid $decoration-line-menu;
+
+  @media screen and (min-width: $tablet-width) {
+    justify-content: flex-end;
+    padding: 50px 37px 40px;
+    border: 2px solid $base-accent-color-background;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    max-width: 245px;
+  }
 }
 
 .catalog__more-title {
@@ -47,8 +114,17 @@
   line-height: 20px;
   text-transform: uppercase;
   position: relative;
-  padding-top: 55px;
+  padding-top: 53px;
   margin: 0 0 8px;
+
+  @media screen and (min-width: $tablet-width) {
+    max-width: 134px;
+    padding-top: 110px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 23px;
+    text-align: center;
+  }
 }
 
 .catalog__more-title::before {
@@ -57,9 +133,14 @@
   width: 30px;
   height: 2px;
   background-color: $icon-basic-grey;
-  top: 23px;
+  top: 13px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media screen and (min-width: $tablet-width) {
+    width: 60px;
+    top: 28px;
+  }
 }
 
 .catalog__more-title::after {
@@ -68,9 +149,13 @@
   width: 2px;
   height: 30px;
   background-color: $icon-basic-grey;
-  top: 9px; /* 23px - 14px (половина высоты крестика с учетом отрисовки пикселей) */
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
+
+  @media screen and (min-width: $tablet-width) {
+    height: 60px;
+  }
 }
 
 .catalog__more-desc {
@@ -78,6 +163,14 @@
   line-height: 16px;
   color: $base-color-text;
   margin: 0 0 21px;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 170px;
+    text-align: center;
+    margin-bottom: 82px;
+  }
 }
 
 .catalog__more-show {
@@ -88,6 +181,16 @@
   text-align: center;
   color: $base-color-text;
   background-color: $base-accent-color-background;
-  max-width: 280px;
+  width: 100%;
   padding: 10px 95px;
+
+  @media screen and (min-width: $tablet-width) {
+    min-width: 250px;
+    padding: 10px 40px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    min-width: 169px;
+    padding: 10px;
+  }
 }
