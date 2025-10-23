@@ -1,4 +1,5 @@
 @use "../common/variables.scss" as *;
+@use "../common/mixins.scss" as *;
 
 .hero {
   font-family: "Oswald", sans-serif;
@@ -7,13 +8,14 @@
   position: relative;
 
   @media screen and (min-width: 768px) {
-    padding: 40px 30px 0;
+    padding: 35px 20px 0;
     display: flex;
     justify-content: center;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 29px 110px 52px;
+    padding: 29px 110px;
+    justify-content: flex-start;
   }
 }
 
@@ -24,7 +26,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 302px;
+  height: 305px;
 
   @include hero-background("../../images/index-background-kitten-mobile@1x.jpg");
 
@@ -69,10 +71,10 @@
     align-items: flex-start;
   }
 
-  @media screen and (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     position: relative;
-    min-width: 1220px;
-    padding: 81px 80px 132px;
+    max-width: 1000px;
+    padding: 81px;
   }
 }
 
@@ -90,7 +92,7 @@
     line-height: 60px;
   }
 
-  @media screen and (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin: 0 0 40px;
     font-size: 60px;
     line-height: 60px;
@@ -110,7 +112,7 @@
     max-width: 416px;
   }
 
-  @media screen and (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin: 0 0 52px;
     font-size: 20px;
     line-height: 20px;
@@ -127,7 +129,6 @@
   min-width: 280px;
 
   @include often-button;
-  @include button-condition;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -139,7 +140,7 @@
     padding: 14px 26px;
   }
 
-  @media screen and (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 0;
     max-width: 244px;
     font-size: 20px;
@@ -154,75 +155,16 @@
   }
 }
 
-.hero__wrapper picture img {
-  display: block;
-  margin-bottom: 3px;
-
-  @media screen and (min-width: $desktop-width) {
-    position: absolute;
-    order: 10;
-    left: 448px;
-    top: 0;
-    width: auto;
-  }
-
-  @media screen and (min-width: $tablet-width) {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: $tablet-width) {
-  .hero__title,
-  .hero__desc {
-    color: $icon-basic-black;
-    background-color: $base-accent-color-text;
-    text-align: start;
-  }
-}
-
-.hero__wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: $desktop-width) {
+@media screen and (min-width: $desktop-width) {
   picture {
     order: 10;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .hero__wrapper {
-    position: relative;
-    min-height: 500px;
-    max-width: 1000px;
-    padding: 81px;
-  }
-
-  .hero__title {
-    margin: 0 0 40px;
-    font-size: 60px;
-    line-height: 60px;
-    max-width: 450px;
-  }
-
-  .hero__desc {
-    margin: 0  0 52px;
-    font-size: 20px;
-    line-height: 20px;
-    max-width: 400px;
-  }
-
-  .hero__nutrition-program {
-    margin-bottom: 0;
-    max-width: 244px;
-    font-size: 20px;
-    line-height: 26px;
-  }
-
   .hero__wrapper picture {
     position: absolute;
-    right: 0;
+    left: 448px;
     top: 0;
     width: auto;
   }

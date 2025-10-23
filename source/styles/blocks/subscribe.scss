@@ -1,5 +1,25 @@
 @use "../common/variables.scss" as *;
 
+.subscribe {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 30px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 0 70px 104px;
+  }
+}
+
+.subscribe__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .subscribe__title {
   font-family: "Oswald", sans-serif;
   font-size: 24px;
@@ -8,7 +28,7 @@
   position: relative;
   inline-size: fit-content;
   padding: 0 40px 0 20px;
-  margin: 40px 0 32px;
+  margin-bottom: 32px;
   background-color: $base-accent-color-text;
 
   &::before {
@@ -32,8 +52,6 @@
 
   @media screen and (min-width: $desktop-width) {
     margin: 0 0 72px;
-    font-size: 40px;
-    line-height: 40px;
   }
 }
 
@@ -52,12 +70,11 @@
     font-size: 24px;
     line-height: 32px;
     min-width: 632px;
-    padding: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
     margin-bottom: 24px;
-    max-width: 1260px;
+    min-width: 1360px;
   }
 }
 
@@ -70,7 +87,7 @@
   @media screen and (min-width: $tablet-width) {
     min-width: 100%;
     flex-direction: row;
-    padding: 0;
+    padding: 0 68px;
     margin: 0 auto;
     gap: 0;
     justify-content: center;
@@ -87,7 +104,6 @@
   text-transform: uppercase;
   color: $base-color-text;
   border: 1px solid $base-color-border;
-  min-width: 280px;
   padding: 12px;
 
   @media screen and (min-width: $tablet-width) {
@@ -97,8 +113,6 @@
   @media screen and (min-width: $desktop-width) {
     min-width: 496px;
   }
-
-  @include input-condition;
 }
 
 .subscribe__form-button {
@@ -110,20 +124,8 @@
   text-transform: uppercase;
   border: none;
   padding: 15px 30px;
-  cursor: pointer;
-
-  @include button-condition;
 
   @media screen and (min-width: $tablet-width) {
     min-width: 256px;
-  }
-}
-
-.subscribe__form {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
   }
 }

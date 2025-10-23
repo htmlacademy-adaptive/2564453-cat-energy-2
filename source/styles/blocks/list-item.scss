@@ -1,4 +1,37 @@
 @use "../common/variables.scss" as *;
+@use "../common/mixins.scss" as *;
+
+.list-item__wrapper {
+  min-width: 140px;
+
+  @media screen and (min-width: $tablet-width) {
+    min-width: 250px;
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    min-width: 169px;
+  }
+}
+
+.list-item__link {
+  min-width: 140px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    min-height: 210px;
+    margin-bottom: 22px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    min-width: 169px;
+    margin-bottom: 12px;
+  }
+}
 
 .list-item__title {
   font-family: "Oswald", sans-serif;
@@ -8,7 +41,6 @@
   color: $base-title-color-text;
   max-width: 76px;
   margin: 0 0 14px;
-  text-transform: uppercase;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
@@ -35,7 +67,6 @@
   @media screen and (min-width: $tablet-width) {
     border-bottom: 1px solid $base-color-border;
     padding-bottom: 5px;
-    padding-top: 3px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -74,6 +105,13 @@
   line-height: 20px;
   color: $base-accent-color-text;
   background-color: $base-color-background;
-  min-width: 280px;
+  width: 100%;
   text-align: center;
+  margin-top: 17px;
+
+  @include often-button();
+
+  @media screen and (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }

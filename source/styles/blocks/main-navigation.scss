@@ -2,6 +2,15 @@
 
 .main-navigation__link {
   color: inherit;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    padding: 22px 24px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
 
 .main-navigation__list {
@@ -28,86 +37,95 @@
     transform: translateY(-20px);
   }
 
-  @media screen and (min-width: $tablet-width) {
-    font-size: 18px;
-    line-height: 24px;
+  @media screen and (min-width: 768px) {
     display: flex;
     gap: 33px;
     position: static;
     background: none;
     padding: 0;
-    margin: 0;
     flex-wrap: wrap;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    font-size: 20px;
+    margin-left: 14px;
   }
 }
 
 .main-navigation__list--index-desktop {
   @media screen and (min-width: $desktop-width) {
     color: $base-accent-color-text;
+  }
+}
 
-    .main-navigation__link--current {
-      color: $base-accent-color-text;
-
-      @include navigation-border($base-accent-color-text);
-    }
+.main-navigation__list--open {
+  @media screen and (max-width: 767px) {
+    opacity: 1;
+    display: block;
+    transform: translateY(0);
   }
 }
 
 .main-navigation__list-item {
   border-bottom: 1px solid $decoration-line-menu;
 
-  &:first-child {
-    border-top: 1px solid $decoration-line-menu;
+  @media screen and (min-width: 768px) {
+    border: none;
+  }
+}
+
+.main-navigation__list-item:first-child {
+  border-top: 1px solid $decoration-line-menu;
+
+  @media screen and (min-width: 768px) {
+    border: none;
+  }
+}
+
+.main-navigation__toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 24px;
+  height: 24px;
+  padding: 2px 0 4px;
+  border: none;
+  background: $base-accent-color-text;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 
-  @media screen and (min-width: $tablet-width) {
-    border: none;
+  &[aria-expanded="true"] {
+    transform: rotate(45deg);
+    padding: 0;
+    gap: 0;
+    width: 18px;
+    height: 18px;
 
-    &:first-child {
-      border-top: none;
+    .main-navigation__toggle-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 25px;
+      margin: 0;
+      transform: translate(-50%, -50%);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+      &:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+      }
     }
   }
 }
 
-/* Стили гамбургера */
-.main-navigation__toggle {
-  width: 24px;
-  height: 24px;
-  position: relative;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-}
-
 .main-navigation__toggle-icon {
   display: block;
-  width: 24px;
+  width: 100%;
   height: 2px;
   background-color: $icon-basic-black;
-  position: relative;
-  transition: all 0.3s ease;
-  top: 11px;
-}
-
-.main-navigation__toggle-icon::before,
-.main-navigation__toggle-icon::after {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background-color: $icon-basic-black;
-  left: 0;
-}
-
-.main-navigation__toggle-icon::before {
-  top: -8px;
-}
-
-.main-navigation__toggle-icon::after {
-  top: 8px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
