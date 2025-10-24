@@ -1,16 +1,70 @@
 @use "../common/variables.scss" as *;
 @use "../common/mixins.scss" as *;
 
+.programs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 30px;
+    margin-bottom: 45px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 81px 110px 0;
+    margin-bottom: 71px;
+    align-items: center;
+  }
+}
+
+.programs__wrapper {
+  max-width: 320px;
+  padding: 20px;
+
+  @media screen and (min-width: 768px) {
+    min-width: 708px;
+    padding: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .programs__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    gap: 30px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    gap: 80px;
+  }
 }
 
 .programs__list-item {
   background-color: $base-accent-color-background;
   position: relative;
+  padding: 21px 31px 18px 20px;
+
+  @media screen and (min-width: 768px) {
+    padding: 77px 63px 53px 52px;
+    min-width: 708px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 77px 61px 55px 52px;
+    min-width: 570px;
+  }
 }
 
 .programs__list-item--weight-loss::after {
@@ -20,8 +74,49 @@
   width: 50px;
   height: 53px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 21px;
+  left: 20px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 200px;
+    height: 211px;
+    top: 81px;
+    left: auto;
+    right: 63px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 100px;
+    height: 106px;
+    top: 41px;
+    left: 52px;
+  }
+}
+
+.programs__list-item--weight-gain::after {
+  content: "";
+  background-image: url("../../icons/cat-black-walk.svg");
+  background-repeat: no-repeat;
+  width: 67px;
+  height: 50px;
+  position: absolute;
+  top: 24px;
+  left: 13px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 268px;
+    height: 200px;
+    top: 91px;
+    left: auto;
+    right: 29px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 134px;
+    height: 100px;
+    top: 47px;
+    left: 33px;
+  }
 }
 
 .programs__list-title {
@@ -30,16 +125,49 @@
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: center;
+  margin: 10px 0 29px;
+}
+
+.programs__list-item--weight-loss,
+.programs__list-item--weight-gain {
+  .programs__list-title {
+    margin-left: 70px;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 0 24px;
+      max-width: 340px;
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin: 0 0 73px 162px;
+    }
+  }
 }
 
 .programs__list-desc {
   line-height: 18px;
   color: $base-color-text;
   position: relative;
+  margin: 0 0 14px;
   padding-bottom: 24px;
 
   @include decorative-line();
+
+  @media screen and (min-width: 768px) {
+    margin: 0 0 48px;
+    padding: 0;
+    max-width: 340px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    &::after {
+      content: none;
+    }
+  }
 }
 
 .programs__list-link {
@@ -51,6 +179,12 @@
   display: inline-block;
   position: relative;
   padding-right: 47px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
 }
 
 .programs__list-link::before {
@@ -74,61 +208,4 @@
   background-color: $icon-basic-black;
   clip-path: polygon(0 0, 100% 50%, 0 100%);
   transform: translateY(-50%);
-}
-
-.programs__list-item--weight-gain::after {
-  content: "";
-  background-image: url("../../icons/cat-black-walk.svg");
-  background-repeat: no-repeat;
-  width: 67px;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-@media screen and (min-width: $tablet-width) {
-  .programs__list-item--weight-gain::after {
-    width: 268px;
-    height: 200px;
-    top: 0;
-    left: auto;
-    right: 0;
-  }
-
-  .programs__list-item--weight-loss::after {
-    width: 200px;
-    height: 211px;
-    top: 0;
-    left: auto;
-    right: 0;
-  }
-
-  .programs__list-item {
-    max-width: 708px;
-  }
-
-  .programs__list-desc::after {
-    content: none;
-  }
-}
-
-@media screen and (min-width: $desktop-width) {
-  .programs__list-item--weight-gain::after {
-    width: 134px;
-    height: 100px;
-    top: 0;
-    left: 0;
-  }
-
-  .programs__list-item--weight-loss::after {
-    width: 100px;
-    height: 106px;
-    top: 0;
-    left: 0;
-  }
-
-  .programs__list-item {
-    max-width: 570px;
-  }
 }

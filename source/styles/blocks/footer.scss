@@ -2,33 +2,64 @@
 @use "../common/mixins.scss" as *;
 @use "../blocks/social-list.scss" as *;
 
-.footer__map {
-  width: 100%;
-
-  @media screen and (min-width: $tablet-width) {
-    max-height: 400px;
-  }
-}
-
 .footer__invite {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  max-width: 140px;
+  text-align: left;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 163px;
+  }
 }
 
 .footer__address {
   font-style: normal;
   line-height: 20px;
   color: $base-color-text;
+  max-width: 140px;
+  text-align: left;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 16px;
+    max-width: 157px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: end;
+
+    &::after {
+      content: attr(data-last-word);
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    text-align: start;
+    gap: 19px;
+  }
 }
 
 .footer__logo {
   display: block;
+  width: 100%;
   padding-bottom: 20px;
   text-align: center;
 
-  @include decorative-line(280px);
+  @include decorative-line;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 128px;
+    padding: 0;
+
+    &::after {
+      content: none;
+    }
+  }
 }
 
 .footer__copyright::after {
@@ -42,16 +73,61 @@
   display: block;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
 .footer__wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
+  min-width: 100%;
+  padding: 26px 20px;
+  background-color: $base-accent-color-text;
+  z-index: 5;
+
+  @media screen and (min-width: $tablet-width) {
+    min-width: 100%;
+    padding: 60px 70px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    position: absolute;
+    min-width: 565px;
+    top: 95px;
+    left: 110px;
+  }
+}
+
+.footer__wrapper--catalog {
+  @media screen and (max-width: $desktop-width) {
+    background-color: $base-accent-color-background;
+  }
+}
+
+.footer__invite,
+.footer__address {
+  padding: 0;
+  margin: 0;
 }
 
 .footer__wrapper-socials {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+  background-color: $base-accent-color-background;
+
+  @media screen and (min-width: $tablet-width) {
+    padding: 55px 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .footer__copyright {
@@ -62,22 +138,69 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 280px;
+  width: 100%;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 168px;
+  }
 }
 
-@media screen and (min-width: $tablet-width) {
-  .footer__wrapper-socials {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+/* карты */
 
-  .social-list::after,
-  .footer__logo::after {
-    content: none;
-  }
+.footer__map-container {
+  position: relative;
+  width: 100%;
+  height: 362px; /* ФИКСИРОВАННАЯ высота для мобильной версии */
 
-  .footer__copyright {
-    min-width: 168px;
+  @media screen and (min-width: $tablet-width) {
+    height: 400px; /* ФИКСИРОВАННАЯ высота для планшета */
   }
+}
+
+/* Основная карта */
+
+.footer__map {
+  position: relative;
+  border: none;
+  z-index: 2;
+  width: 100%;
+  height: 362px;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+/* Fallback для карты */
+
+.footer__map-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Изображение fallback с сохранением пропорций */
+
+.footer__map-fallback-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Показываем fallback при ошибке */
+
+.footer__map-container--error .footer__map-fallback {
+  display: block;
+}
+
+/* Скрываем карту при ошибке */
+
+.footer__map-container--error .footer__map {
+  display: none;
 }

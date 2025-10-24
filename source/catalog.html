@@ -23,16 +23,18 @@
           <img class="main-header__logo-image" src="./images/logo-text-mobile.svg" width="190" height="38" alt="Логотип «Кэт энерджи»">
         </picture>
       </a>
-      <button class="main-header__toggle" type="button">
-        <span class="visually-hidden">Открыть/Закрыть меню</span>
-      </button>
       <nav class="main-navigation">
-        <ul class="main-navigation__list">
+        <button class="main-navigation__toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Главное меню открыть/закрыть">
+          <span class="main-navigation__toggle-icon"></span>
+          <span class="main-navigation__toggle-icon"></span>
+          <span class="main-navigation__toggle-icon"></span>
+        </button>
+        <ul class="main-navigation__list" id="main-menu" aria-hidden="true">
           <li class="main-navigation__list-item">
-            <a class="main-navigation__link" href="./index.html">Главная</a>
+            <a class="main-navigation__link main-navigation__link--current" href="./index.html">Главная</a>
           </li>
           <li class="main-navigation__list-item">
-            <a class="main-navigation__link main-navigation__link--current" href="./catalog.html">Каталог продукции</a>
+            <a class="main-navigation__link" href="./catalog.html">Каталог продукции</a>
           </li>
           <li class="main-navigation__list-item">
             <a class="main-navigation__link" href="./form.html">Подбор программы</a>
@@ -56,20 +58,22 @@
             </a>
             <div class="list-item__wrapper">
               <h3 class="list-item__title">Cat energy pro 500 г</h3>
-              <table class="list-item__desc">
-                <tr>
-                  <td class="list-item__desc-title">Масса</td>
-                  <td class="list-item__desc-content">500 г</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Вкус</td>
-                  <td class="list-item__desc-content">Курица</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Цена</td>
-                  <td class="list-item__desc-content">700 ₽</td>
-                </tr>
-              </table>
+              <div class="list-item__desc-wrapper">
+                <table class="list-item__desc">
+                  <tr>
+                    <td class="list-item__desc-title">Масса</td>
+                    <td class="list-item__desc-content">500 г</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Вкус</td>
+                    <td class="list-item__desc-content">Курица</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Цена</td>
+                    <td class="list-item__desc-content">700 ₽</td>
+                  </tr>
+                </table>
+              </div>
             </div>
             <a class="list-item__link-order" href="#">Заказать</a>
           </li>
@@ -83,20 +87,22 @@
             </a>
             <div class="list-item__wrapper">
               <h3 class="list-item__title">Cat energy pro 1000 г</h3>
-              <table class="list-item__desc">
-                <tr>
-                  <td class="list-item__desc-title">Масса</td>
-                  <td class="list-item__desc-content">1000 г</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Вкус</td>
-                  <td class="list-item__desc-content">Курица</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Цена</td>
-                  <td class="list-item__desc-content">1000 ₽</td>
-                </tr>
-              </table>
+              <div class="list-item__desc-wrapper">
+                <table class="list-item__desc">
+                  <tr>
+                    <td class="list-item__desc-title">Масса</td>
+                    <td class="list-item__desc-content">1000 г</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Вкус</td>
+                    <td class="list-item__desc-content">Курица</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Цена</td>
+                    <td class="list-item__desc-content">1000 ₽</td>
+                  </tr>
+                </table>
+              </div>
             </div>
             <a class="list-item__link-order" href="#">Заказать</a>
           </li>
@@ -109,20 +115,22 @@
             </a>
             <div class="list-item__wrapper">
               <h3 class="list-item__title">Cat energy pro 500 г</h3>
-              <table class="list-item__desc">
-                <tr>
-                  <td class="list-item__desc-title">Масса</td>
-                  <td class="list-item__desc-content">500 г</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Вкус</td>
-                  <td class="list-item__desc-content">Рыба</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Цена</td>
-                  <td class="list-item__desc-content">700 ₽</td>
-                </tr>
-              </table>
+              <div class="list-item__desc-wrapper">
+                <table class="list-item__desc">
+                  <tr>
+                    <td class="list-item__desc-title">Масса</td>
+                    <td class="list-item__desc-content">500 г</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Вкус</td>
+                    <td class="list-item__desc-content">Рыба</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Цена</td>
+                    <td class="list-item__desc-content">700 ₽</td>
+                  </tr>
+                </table>
+              </div>
             </div>
             <a class="list-item__link-order" href="#">Заказать</a>
           </li>
@@ -136,20 +144,22 @@
             </a>
             <div class="list-item__wrapper">
               <h3 class="list-item__title">Cat energy pro 1000 г</h3>
-              <table class="list-item__desc">
-                <tr>
-                  <td class="list-item__desc-title">Масса</td>
-                  <td class="list-item__desc-content">1000 г</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Вкус</td>
-                  <td class="list-item__desc-content">Рыба</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Цена</td>
-                  <td class="list-item__desc-content">1000 ₽</td>
-                </tr>
-              </table>
+              <div class="list-item__desc-wrapper">
+                <table class="list-item__desc">
+                  <tr>
+                    <td class="list-item__desc-title">Масса</td>
+                    <td class="list-item__desc-content">1000 г</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Вкус</td>
+                    <td class="list-item__desc-content">Рыба</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Цена</td>
+                    <td class="list-item__desc-content">1000 ₽</td>
+                  </tr>
+                </table>
+              </div>
             </div>
             <a class="list-item__link-order" href="#">Заказать</a>
           </li>
@@ -162,20 +172,22 @@
             </a>
             <div class="list-item__wrapper">
               <h3 class="list-item__title">Cat energy slim 500 г</h3>
-              <table class="list-item__desc">
-                <tr>
-                  <td class="list-item__desc-title">Масса</td>
-                  <td class="list-item__desc-content">500 г</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Вкус</td>
-                  <td class="list-item__desc-content">Гречка</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Цена</td>
-                  <td class="list-item__desc-content">400 ₽</td>
-                </tr>
-              </table>
+              <div class="list-item__desc-wrapper">
+                <table class="list-item__desc">
+                  <tr>
+                    <td class="list-item__desc-title">Масса</td>
+                    <td class="list-item__desc-content">500 г</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Вкус</td>
+                    <td class="list-item__desc-content">Гречка</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Цена</td>
+                    <td class="list-item__desc-content">400 ₽</td>
+                  </tr>
+                </table>
+              </div>
             </div>
             <a class="list-item__link-order" href="#">Заказать</a>
           </li>
@@ -189,20 +201,22 @@
             </a>
             <div class="list-item__wrapper">
               <h3 class="list-item__title">Cat energy slim 1000 г</h3>
-              <table class="list-item__desc">
-                <tr>
-                  <td class="list-item__desc-title">Масса</td>
-                  <td class="list-item__desc-content">1000 г</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Вкус</td>
-                  <td class="list-item__desc-content">Гречка</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Цена</td>
-                  <td class="list-item__desc-content">700 ₽</td>
-                </tr>
-              </table>
+              <div class="list-item__desc-wrapper">
+                <table class="list-item__desc">
+                  <tr>
+                    <td class="list-item__desc-title">Масса</td>
+                    <td class="list-item__desc-content">1000 г</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Вкус</td>
+                    <td class="list-item__desc-content">Гречка</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Цена</td>
+                    <td class="list-item__desc-content">700 ₽</td>
+                  </tr>
+                </table>
+              </div>
             </div>
             <a class="list-item__link-order" href="#">Заказать</a>
           </li>
@@ -215,20 +229,22 @@
             </a>
             <div class="list-item__wrapper">
               <h3 class="list-item__title">Cat energy slim 500 г</h3>
-              <table class="list-item__desc">
-                <tr>
-                  <td class="list-item__desc-title">Масса</td>
-                  <td class="list-item__desc-content">500 г</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Вкус</td>
-                  <td class="list-item__desc-content">Рис</td>
-                </tr>
-                <tr>
-                  <td class="list-item__desc-title">Цена</td>
-                  <td class="list-item__desc-content">500 ₽</td>
-                </tr>
-              </table>
+              <div class="list-item__desc-wrapper">
+                <table class="list-item__desc">
+                  <tr>
+                    <td class="list-item__desc-title">Масса</td>
+                    <td class="list-item__desc-content">500 г</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Вкус</td>
+                    <td class="list-item__desc-content">Рис</td>
+                  </tr>
+                  <tr>
+                    <td class="list-item__desc-title">Цена</td>
+                    <td class="list-item__desc-content">500 ₽</td>
+                  </tr>
+                </table>
+              </div>
             </div>
             <a class="list-item__link-order" href="#">Заказать</a>
           </li>
@@ -247,42 +263,50 @@
           <ul class="sub-products__list">
             <li class="sub-products__item">
               <h3 class="sub-products__item-title">Сахарозаменитель</h3>
-              <table class="sub-products__table">
-                <tr>
-                  <td class="sub-products__desc">1 упаковка (100 г)</td>
-                  <td class="sub-products__price">200 ₽</td>
-                </tr>
-              </table>
+              <div class="sub-products__table-wrapper">
+                <table class="sub-products__table">
+                  <tr>
+                    <td class="sub-products__desc">1 упаковка (100 г)</td>
+                    <td class="sub-products__price">200 ₽</td>
+                  </tr>
+                </table>
+              </div>
               <a class="sub-products__link-order" href="#">Заказать</a>
             </li>
             <li class="sub-products__item">
               <h3 class="sub-products__item-title">Питьевая вода</h3>
-              <table class="sub-products__table">
-                <tr>
-                  <td class="sub-products__desc">5 литров</td>
-                  <td class="sub-products__price">50 ₽</td>
-                </tr>
-              </table>
+              <div class="sub-products__table-wrapper">
+                <table class="sub-products__table">
+                  <tr>
+                    <td class="sub-products__desc">5 литров</td>
+                    <td class="sub-products__price">50 ₽</td>
+                  </tr>
+                </table>
+              </div>
               <a class="sub-products__link-order" href="#">Заказать</a>
             </li>
             <li class="sub-products__item">
               <h3 class="sub-products__item-title">Молоко</h3>
-              <table class="sub-products__table">
-                <tr>
-                  <td class="sub-products__desc">1 литр</td>
-                  <td class="sub-products__price">100 ₽</td>
-                </tr>
-              </table>
+              <div class="sub-products__table-wrapper">
+                <table class="sub-products__table">
+                  <tr>
+                    <td class="sub-products__desc">1 литр</td>
+                    <td class="sub-products__price">100 ₽</td>
+                  </tr>
+                </table>
+              </div>
               <a class="sub-products__link-order" href="#">Заказать</a>
             </li>
             <li class="sub-products__item">
               <h3 class="sub-products__item-title">Витамины</h3>
-              <table class="sub-products__table">
-                <tr>
-                  <td class="sub-products__desc">1 упаковка (30 г)</td>
-                  <td class="sub-products__price">300 ₽</td>
-                </tr>
-              </table>
+              <div class="sub-products__table-wrapper">
+                <table class="sub-products__table">
+                  <tr>
+                    <td class="sub-products__desc">1 упаковка (30 г)</td>
+                    <td class="sub-products__price">300 ₽</td>
+                  </tr>
+                </table>
+              </div>
               <a class="sub-products__link-order" href="#">Заказать</a>
             </li>
           </ul>
@@ -305,13 +329,23 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__wrapper">
+    <div class="footer__wrapper footer__wrapper--catalog">
       <p class="footer__invite">Приглашаем к сотрудничеству дилеров!</p>
       <address class="footer__address">ул. Большая Конюшенная, д. 19/8
         <span class="footer__address-town">Санкт-Петербург</span>
       </address>
     </div>
-    <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991047846933!2d30.32050837715263!3d59.9387941749152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0xa24b26c0d196de71!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1754684041879!5m2!1sen!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="footer__map-container">
+      <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991047846933!2d30.32050837715263!3d59.9387941749152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0xa24b26c0d196de71!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1754684041879!5m2!1sen!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" onerror="this.closest('.footer__map-container').classList.add('footer__map-container--error')">
+      </iframe>
+      <div class="footer__map-fallback">
+        <picture>
+          <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="./images/map-index-desktop@1x.jpg 1x, ./images/map-index-desktop@2x.jpg 2x">
+          <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="./images/map-index-tablet@1x.jpg 1x, ./images/map-index-tablet@2x.jpg 2x">
+          <img class="footer__map-fallback-image" src="./images/location-background-mobile@1x.png" srcset="./images/location-background-mobile@2x.png 2x" width="320" height="362" alt="Карта расположения офиса">
+        </picture>
+      </div>
+    </div>
     <div class="footer__wrapper-socials">
       <a class="footer__logo" href="./index.html" aria-label="Перейти на главную страницу">
         <img class="footer__logo-text" src="./images/footer-text-logo.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
