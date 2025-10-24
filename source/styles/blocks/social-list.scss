@@ -18,6 +18,10 @@
     max-width: 400px;
     margin: 0;
     padding: 8px 0 7px;
+
+    &::after {
+      content: none;
+    }
   }
 }
 

@@ -45,6 +45,10 @@
   @media screen and (min-width: 768px) {
     gap: 30px;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    gap: 80px;
+  }
 }
 
 .programs__list-item {
