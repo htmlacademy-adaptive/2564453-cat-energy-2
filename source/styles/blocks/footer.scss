@@ -55,6 +55,10 @@
   @media screen and (min-width: $tablet-width) {
     width: 128px;
     padding: 0;
+
+    &::after {
+      content: none;
+    }
   }
 }
 
