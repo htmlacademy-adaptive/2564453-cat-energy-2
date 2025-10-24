@@ -21,6 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const slider = demonstrationBlock.querySelector('.demonstration__slider');
   let isMoving = false;
 
+  const setSliderPosition = (percentage) => {
+    slider.style.left = `${percentage}%`;
+
+    beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+
+    afterImage.style.clipPath = `polygon(${percentage}% 0, 100% 0, 100% 100%, ${percentage}% 100%)`;
+
+    slider.setAttribute('aria-valuenow', Math.round(percentage));
+  };
+
   const updateSliderPosition = (clientX) => {
     const demonstrationRect = demonstrationBlock.getBoundingClientRect();
     let relativeX = clientX - demonstrationRect.left;
@@ -30,16 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const percentage = (relativeX / demonstrationRect.width) * 100;
 
     setSliderPosition(percentage);
-  };
-
-  const setSliderPosition = (percentage) => {
-    slider.style.left = `${percentage}%`;
-
-    beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
-
-    afterImage.style.clipPath = `polygon(${percentage}% 0, 100% 0, 100% 100%, ${percentage}% 100%)`;
-
-    slider.setAttribute('aria-valuenow', Math.round(percentage));
   };
 
   setSliderPosition(50);
