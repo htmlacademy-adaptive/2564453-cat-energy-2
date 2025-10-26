@@ -14,7 +14,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 29px 110px;
+    padding: 29px 110px 52px;
     justify-content: flex-start;
   }
 }
@@ -26,7 +26,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 305px;
+  height: 302px;
 
   @include hero-background("../../images/index-background-kitten-mobile@1x.jpg");
 
@@ -71,10 +71,10 @@
     align-items: flex-start;
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     position: relative;
     max-width: 1000px;
-    padding: 80px;
+    padding: 81px 80px 132px;
   }
 }
 
@@ -92,7 +92,7 @@
     line-height: 60px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     margin: 0 0 40px;
     font-size: 60px;
     line-height: 60px;
@@ -112,7 +112,7 @@
     max-width: 416px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     margin: 0 0 52px;
     font-size: 20px;
     line-height: 20px;
@@ -140,7 +140,7 @@
     padding: 14px 26px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media screen and (min-width: $desktop-width) {
     margin-bottom: 0;
     max-width: 244px;
     font-size: 20px;
@@ -155,23 +155,24 @@
   }
 }
 
-@media screen and (min-width: $desktop-width) {
-  picture img {
-    display: block;
-    order: 10;
-  }
-}
+.hero__wrapper picture img {
+  display: block;
+  margin-bottom: 3px;
 
-@media (min-width: $desktop-width) {
-  .hero__wrapper picture img {
+  @media screen and (min-width: $desktop-width) {
     position: absolute;
+    order: 10;
     left: 448px;
     top: 0;
     width: auto;
   }
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
-@media (min-width: $tablet-width) {
+@media screen and (min-width: $tablet-width) {
   .hero__title,
   .hero__desc {
     color: $icon-basic-black;
