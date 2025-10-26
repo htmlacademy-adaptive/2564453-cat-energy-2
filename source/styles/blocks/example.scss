@@ -30,8 +30,9 @@
     display: flex;
     flex-flow: row wrap;
     padding: 0 101px 85px;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: center;
+    gap: 224px;
 
     &::before {
       background-color: $base-accent-color-background;
@@ -47,7 +48,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     max-width: 708px;
-    margin-bottom: 99px;
+    margin-bottom: 104px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -66,6 +67,8 @@
 
   @media screen and (min-width: $tablet-width) {
     margin: 0 0 60px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -98,6 +101,11 @@
   @media screen and (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    min-width: 162px;
+    text-align: center;
   }
 }
 
@@ -136,9 +144,18 @@
   text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
   gap: 30px;
   justify-content: center;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    gap: 42px;
+    margin-bottom: 60px;
+  }
 }
 
 .example__results-difference {
@@ -152,6 +169,8 @@
 
   @media screen and (min-width: $desktop-width) {
     @include decorative-border($background: $base-accent-color-background);
+    padding-top: 15px;
+    padding-bottom: 20px;
   }
 }
 
@@ -166,5 +185,8 @@
 
   @media screen and (min-width: $desktop-width) {
     @include decorative-border($background: $base-accent-color-background);
+    padding-top: 15px;
+    padding-bottom: 20px;
   }
 }
+

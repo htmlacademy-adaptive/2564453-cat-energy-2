@@ -12,7 +12,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 81px 110px 0;
+    padding: 82px 110px 0;
     margin-bottom: 71px;
     align-items: center;
   }
@@ -20,7 +20,7 @@
 
 .programs__wrapper {
   max-width: 320px;
-  padding: 20px;
+  padding: 0 20px 20px;
 
   @media screen and (min-width: 768px) {
     min-width: 708px;
@@ -54,7 +54,7 @@
 .programs__list-item {
   background-color: $base-accent-color-background;
   position: relative;
-  padding: 21px 31px 18px 20px;
+  padding: 21px 33px 18px 20px;
 
   @media screen and (min-width: 768px) {
     padding: 77px 63px 53px 52px;
@@ -133,7 +133,7 @@
   .programs__list-title {
     margin-left: 70px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet-width) {
       margin: 0 0 24px;
       max-width: 340px;
       font-size: 36px;
@@ -155,7 +155,7 @@
 
   @include decorative-line();
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
     margin: 0 0 48px;
     padding: 0;
     max-width: 340px;
@@ -167,6 +167,11 @@
     &::after {
       content: none;
     }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 0 0 23px;
+    max-width: 457px;
   }
 }
 
