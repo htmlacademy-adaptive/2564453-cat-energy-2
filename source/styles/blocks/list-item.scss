@@ -16,7 +16,10 @@
 
 .list-item__link {
   min-width: 140px;
-  text-align: center;
+  min-height: 107px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: $tablet-width) {
     display: flex;

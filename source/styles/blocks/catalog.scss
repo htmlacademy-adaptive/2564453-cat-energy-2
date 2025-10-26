@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 26px;
+  margin-bottom: 25px;
 
   @media screen and (min-width: $tablet-width) {
     margin-bottom: 74px;
@@ -63,7 +63,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 20px 20px 25px;
-  border-top: 3px solid $decoration-line-menu;
+  border-top: 1px solid $decoration-line-menu;
 
 
   @media screen and (min-width: $tablet-width) {
@@ -71,7 +71,7 @@
     position: relative;
     justify-content: end;
     border-top: none;
-    padding: 29px 37px 40px;
+    padding: 10px 37px 40px;
 
     &::before {
       content: "";
