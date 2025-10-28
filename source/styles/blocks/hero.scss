@@ -15,7 +15,6 @@
 
   @media screen and (min-width: $desktop-width) {
     padding: 29px 110px 52px;
-    justify-content: flex-start;
   }
 }
 
@@ -73,7 +72,7 @@
 
   @media screen and (min-width: $desktop-width) {
     position: relative;
-    max-width: 1000px;
+    min-width: 1220px;
     padding: 81px 80px 132px;
   }
 }
@@ -129,6 +128,7 @@
   min-width: 280px;
 
   @include often-button;
+  @include button-condition;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
