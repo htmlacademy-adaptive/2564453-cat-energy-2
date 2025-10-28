@@ -48,6 +48,7 @@
 
   @media screen and (min-width: $desktop-width) {
     gap: 80px;
+    justify-content: center;
   }
 }
 
@@ -184,6 +185,8 @@
   display: inline-block;
   position: relative;
   padding-right: 47px;
+
+  @include arrow-condition;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;

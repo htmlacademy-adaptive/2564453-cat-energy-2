@@ -6,14 +6,21 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  margin: 0;
-  padding: 27px 20px 40px;
-  min-width: 275px;
-  border-top: 1px solid $decoration-line;
+  margin: 0 auto;
+  padding: 27px 40px 40px 20px;
+  max-width: 322px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    padding: 39px 0 84px 30px;
+    padding: 39px 100px 84px 30px;
+    border: none;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    max-width: 1440px;
+    padding: 74px 110px 84px;
   }
 }

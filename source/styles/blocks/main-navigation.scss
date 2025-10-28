@@ -1,17 +1,5 @@
 @use "../common/variables.scss" as *;
-
-.main-navigation__link {
-  color: inherit;
-
-  @media screen and (max-width: 767px) {
-    display: block;
-    padding: 22px 24px;
-    text-decoration: none;
-    color: inherit;
-    font-size: 18px;
-    font-weight: 500;
-  }
-}
+@use "../common/mixins.scss" as *;
 
 .main-navigation__list {
   font-family: "Oswald", sans-serif;
@@ -37,7 +25,9 @@
     transform: translateY(-20px);
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
     display: flex;
     gap: 33px;
     position: static;
@@ -46,11 +36,68 @@
     margin: 0;
     flex-wrap: wrap;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 20px;
+  }
 }
 
 .main-navigation__list--index-desktop {
   @media screen and (min-width: $desktop-width) {
     color: $base-accent-color-text;
+
+    .main-navigation__link--current {
+      color: $base-accent-color-text;
+
+      @include navigation-border($base-accent-color-text);
+    }
+  }
+}
+
+.main-navigation__list-item {
+  border-bottom: 1px solid $decoration-line-menu;
+
+  &:first-child {
+    border-top: 1px solid $decoration-line-menu;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    border: none;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
+
+.main-navigation__link {
+  color: inherit;
+  display: block;
+
+  @media screen and (max-width: $tablet-width) {
+    padding: 22px 24px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    padding-bottom: 10px;
+
+    &--current {
+      @include navigation-border;
+    }
+  }
+
+  &:hover {
+    transition: opacity 0.3s ease;
+    opacity: 0.6;
+  }
+
+  &:active {
+    transition: opacity 0.3s ease;
+    opacity: 0.3;
   }
 }
 
@@ -59,22 +106,6 @@
     opacity: 1;
     display: block;
     transform: translateY(0);
-  }
-}
-
-.main-navigation__list-item {
-  border-bottom: 1px solid $decoration-line-menu;
-
-  @media screen and (min-width: 768px) {
-    border: none;
-  }
-}
-
-.main-navigation__list-item:first-child {
-  border-top: 1px solid $decoration-line-menu;
-
-  @media screen and (min-width: 768px) {
-    border: none;
   }
 }
 
@@ -89,6 +120,16 @@
   background: $base-accent-color-text;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    transition: opacity 0.3s ease;
+    opacity: 0.6;
+  }
+
+  &:active {
+    transition: opacity 0.3s ease;
+    opacity: 0.3;
+  }
 
   @media screen and (min-width: $tablet-width) {
     display: none;
