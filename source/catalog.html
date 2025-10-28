@@ -8,7 +8,7 @@
   <link rel="icon" href="./favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -31,10 +31,10 @@
         </button>
         <ul class="main-navigation__list" id="main-menu" aria-hidden="true">
           <li class="main-navigation__list-item">
-            <a class="main-navigation__link main-navigation__link--current" href="./index.html">Главная</a>
+            <a class="main-navigation__link" href="./index.html">Главная</a>
           </li>
           <li class="main-navigation__list-item">
-            <a class="main-navigation__link" href="./catalog.html">Каталог продукции</a>
+            <a class="main-navigation__link main-navigation__link--current" href="./catalog.html">Каталог продукции</a>
           </li>
           <li class="main-navigation__list-item">
             <a class="main-navigation__link" href="./form.html">Подбор программы</a>
@@ -50,203 +50,217 @@
       <div class="catalog__wrapper">
         <ul class="catalog__list">
           <li class="catalog__item list-item">
-            <a class="list-item__link" href="#" aria-label="ссылка на cat energy pro 500 г курица">
-              <picture>
-                <source width="161" height="172" type="image/png" media="(min-width: 768px)" srcset="./images/500-chiken-tablet-desktop@1x.png 1x, ./images/500-chiken-tablet-desktop@2x.png 2x">
-                <img class="list-item__image" src="./images/500-chiken-mobile@1x.png" srcset="./images/500-chiken-mobile@2x.png 2x" width="68" height="86" alt="Cat energy pro 500 г курица">
-              </picture>
-            </a>
-            <div class="list-item__wrapper">
-              <h3 class="list-item__title">Cat energy pro 500 г</h3>
-              <div class="list-item__desc-wrapper">
-                <table class="list-item__desc">
-                  <tr>
-                    <td class="list-item__desc-title">Масса</td>
-                    <td class="list-item__desc-content">500 г</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Вкус</td>
-                    <td class="list-item__desc-content">Курица</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Цена</td>
-                    <td class="list-item__desc-content">700 ₽</td>
-                  </tr>
-                </table>
+            <div class="catalog__item-wrapper">
+              <a class="list-item__link" href="#" aria-label="ссылка на cat energy pro 500 г курица">
+                <picture>
+                  <source width="161" height="172" type="image/png" media="(min-width: 768px)" srcset="./images/500-chiken-tablet-desktop@1x.png 1x, ./images/500-chiken-tablet-desktop@2x.png 2x">
+                  <img class="list-item__image" src="./images/500-chiken-mobile@1x.png" srcset="./images/500-chiken-mobile@2x.png 2x" width="68" height="86" alt="Cat energy pro 500 г курица">
+                </picture>
+              </a>
+              <div class="list-item__wrapper">
+                <h3 class="list-item__title">Cat energy pro 500 г</h3>
+                <div class="list-item__desc-wrapper">
+                  <table class="list-item__desc">
+                    <tr>
+                      <td class="list-item__desc-title">Масса</td>
+                      <td class="list-item__desc-content">500 г</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Вкус</td>
+                      <td class="list-item__desc-content">Курица</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Цена</td>
+                      <td class="list-item__desc-content">700 ₽</td>
+                    </tr>
+                  </table>
+                </div>
               </div>
+              <a class="list-item__link-order" href="#">Заказать</a>
             </div>
-            <a class="list-item__link-order" href="#">Заказать</a>
           </li>
           <li class="catalog__item list-item">
-            <a class="list-item__link" href="#" aria-label="ссылка на cat energy pro 1000 г курица">
-              <picture>
-                <source width="172" height="196" type="image/png" media="(min-width: 1440px)" srcset="./images/1000-chiken-desktop@1x.png 1x, ./images/1000-chiken-desktop@2x.png 2x">
-                <source width="168" height="206" type="image/png" media="(min-width: 768px)" srcset="./images/1000-chiken-tablet@1x.png 1x, ./images/1000-chiken-tablet@2x.png 2x">
-                <img class="list-item__image" src="./images/1000-chiken-mobile@1x.png" srcset="./images/1000-chiken-mobile@2x.png 2x" width="84" height="100" alt="Cat energy pro 1000 г курица">
-              </picture>
-            </a>
-            <div class="list-item__wrapper">
-              <h3 class="list-item__title">Cat energy pro 1000 г</h3>
-              <div class="list-item__desc-wrapper">
-                <table class="list-item__desc">
-                  <tr>
-                    <td class="list-item__desc-title">Масса</td>
-                    <td class="list-item__desc-content">1000 г</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Вкус</td>
-                    <td class="list-item__desc-content">Курица</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Цена</td>
-                    <td class="list-item__desc-content">1000 ₽</td>
-                  </tr>
-                </table>
+            <div class="catalog__item-wrapper">
+              <a class="list-item__link" href="#" aria-label="ссылка на cat energy pro 1000 г курица">
+                <picture>
+                  <source width="172" height="196" type="image/png" media="(min-width: 1440px)" srcset="./images/1000-chiken-desktop@1x.png 1x, ./images/1000-chiken-desktop@2x.png 2x">
+                  <source width="168" height="206" type="image/png" media="(min-width: 768px)" srcset="./images/1000-chiken-tablet@1x.png 1x, ./images/1000-chiken-tablet@2x.png 2x">
+                  <img class="list-item__image" src="./images/1000-chiken-mobile@1x.png" srcset="./images/1000-chiken-mobile@2x.png 2x" width="84" height="100" alt="Cat energy pro 1000 г курица">
+                </picture>
+              </a>
+              <div class="list-item__wrapper">
+                <h3 class="list-item__title">Cat energy pro 1000 г</h3>
+                <div class="list-item__desc-wrapper">
+                  <table class="list-item__desc">
+                    <tr>
+                      <td class="list-item__desc-title">Масса</td>
+                      <td class="list-item__desc-content">1000 г</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Вкус</td>
+                      <td class="list-item__desc-content">Курица</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Цена</td>
+                      <td class="list-item__desc-content">1000 ₽</td>
+                    </tr>
+                  </table>
+                </div>
               </div>
+              <a class="list-item__link-order" href="#">Заказать</a>
             </div>
-            <a class="list-item__link-order" href="#">Заказать</a>
           </li>
           <li class="catalog__item list-item">
-            <a class="list-item__link" href="#" aria-label="ссылка на cat energy pro 500 г рыба">
-              <picture>
-                <source width="163" height="174" type="image/png" media="(min-width: 768px)" srcset="./images/500-fish-tablet-desktop@1x.png 1x, ./images/500-fish-tablet-desktop@2x.png 2x">
-                <img class="list-item__image" src="./images/500-fish-mobile@1x.png" srcset="./images/500-fish-mobile@2x.png 2x" width="68" height="78" alt="Cat energy pro 500 г рыба">
-              </picture>
-            </a>
-            <div class="list-item__wrapper">
-              <h3 class="list-item__title">Cat energy pro 500 г</h3>
-              <div class="list-item__desc-wrapper">
-                <table class="list-item__desc">
-                  <tr>
-                    <td class="list-item__desc-title">Масса</td>
-                    <td class="list-item__desc-content">500 г</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Вкус</td>
-                    <td class="list-item__desc-content">Рыба</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Цена</td>
-                    <td class="list-item__desc-content">700 ₽</td>
-                  </tr>
-                </table>
+            <div class="catalog__item-wrapper">
+              <a class="list-item__link" href="#" aria-label="ссылка на cat energy pro 500 г рыба">
+                <picture>
+                  <source width="163" height="174" type="image/png" media="(min-width: 768px)" srcset="./images/500-fish-tablet-desktop@1x.png 1x, ./images/500-fish-tablet-desktop@2x.png 2x">
+                  <img class="list-item__image" src="./images/500-fish-mobile@1x.png" srcset="./images/500-fish-mobile@2x.png 2x" width="68" height="78" alt="Cat energy pro 500 г рыба">
+                </picture>
+              </a>
+              <div class="list-item__wrapper">
+                <h3 class="list-item__title">Cat energy pro 500 г</h3>
+                <div class="list-item__desc-wrapper">
+                  <table class="list-item__desc">
+                    <tr>
+                      <td class="list-item__desc-title">Масса</td>
+                      <td class="list-item__desc-content">500 г</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Вкус</td>
+                      <td class="list-item__desc-content">Рыба</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Цена</td>
+                      <td class="list-item__desc-content">700 ₽</td>
+                    </tr>
+                  </table>
+                </div>
               </div>
+              <a class="list-item__link-order" href="#">Заказать</a>
             </div>
-            <a class="list-item__link-order" href="#">Заказать</a>
           </li>
           <li class="catalog__item list-item">
-            <a class="list-item__link" href="#" aria-label="ссылка на сat energy pro 1000 г рыба">
-              <picture>
-                <source width="172" height="196" type="image/png" media="(min-width: 1440px)" srcset="./images/1000-fish-desktop@1x.png 1x, ./images/1000-fish-desktop@2x.png 2x">
-                <source width="168" height="200" type="image/png" media="(min-width: 768px)" srcset="./images/1000-fish-tablet@1x.png 1x, ./images/1000-fish-tablet@2x.png 2x">
-                <img class="list-item__image" src="./images/1000-fish-mobile@1x.png" srcset="./images/1000-fish-mobile@2x.png 2x" width="84" height="100" alt="Cat energy pro 1000 г рыба">
-              </picture>
-            </a>
-            <div class="list-item__wrapper">
-              <h3 class="list-item__title">Cat energy pro 1000 г</h3>
-              <div class="list-item__desc-wrapper">
-                <table class="list-item__desc">
-                  <tr>
-                    <td class="list-item__desc-title">Масса</td>
-                    <td class="list-item__desc-content">1000 г</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Вкус</td>
-                    <td class="list-item__desc-content">Рыба</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Цена</td>
-                    <td class="list-item__desc-content">1000 ₽</td>
-                  </tr>
-                </table>
+            <div class="catalog__item-wrapper">
+              <a class="list-item__link" href="#" aria-label="ссылка на сat energy pro 1000 г рыба">
+                <picture>
+                  <source width="172" height="196" type="image/png" media="(min-width: 1440px)" srcset="./images/1000-fish-desktop@1x.png 1x, ./images/1000-fish-desktop@2x.png 2x">
+                  <source width="168" height="200" type="image/png" media="(min-width: 768px)" srcset="./images/1000-fish-tablet@1x.png 1x, ./images/1000-fish-tablet@2x.png 2x">
+                  <img class="list-item__image" src="./images/1000-fish-mobile@1x.png" srcset="./images/1000-fish-mobile@2x.png 2x" width="84" height="100" alt="Cat energy pro 1000 г рыба">
+                </picture>
+              </a>
+              <div class="list-item__wrapper">
+                <h3 class="list-item__title">Cat energy pro 1000 г</h3>
+                <div class="list-item__desc-wrapper">
+                  <table class="list-item__desc">
+                    <tr>
+                      <td class="list-item__desc-title">Масса</td>
+                      <td class="list-item__desc-content">1000 г</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Вкус</td>
+                      <td class="list-item__desc-content">Рыба</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Цена</td>
+                      <td class="list-item__desc-content">1000 ₽</td>
+                    </tr>
+                  </table>
+                </div>
               </div>
+              <a class="list-item__link-order" href="#">Заказать</a>
             </div>
-            <a class="list-item__link-order" href="#">Заказать</a>
           </li>
           <li class="catalog__item list-item">
-            <a class="list-item__link" href="#" aria-label="ссылка на cat energy slim 500 г гречка">
-              <picture>
-                <source width="161" height="171" type="image/png" media="(min-width: 768px)" srcset="./images/500-buckwheat-tablet-desktop@1x.png 1x, ./images/500-buckwheat-tablet-desktop@2x.png 2x">
-                <img class="list-item__image" src="./images/500-buckwheat-mobile@1x.png" srcset="./images/500-buckwheat-mobile@2x.png 2x" width="68" height="78" alt="Cat energy pro 500 г гречка">
-              </picture>
-            </a>
-            <div class="list-item__wrapper">
-              <h3 class="list-item__title">Cat energy slim 500 г</h3>
-              <div class="list-item__desc-wrapper">
-                <table class="list-item__desc">
-                  <tr>
-                    <td class="list-item__desc-title">Масса</td>
-                    <td class="list-item__desc-content">500 г</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Вкус</td>
-                    <td class="list-item__desc-content">Гречка</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Цена</td>
-                    <td class="list-item__desc-content">400 ₽</td>
-                  </tr>
-                </table>
+            <div class="catalog__item-wrapper">
+              <a class="list-item__link" href="#" aria-label="ссылка на cat energy slim 500 г гречка">
+                <picture>
+                  <source width="161" height="171" type="image/png" media="(min-width: 768px)" srcset="./images/500-buckwheat-tablet-desktop@1x.png 1x, ./images/500-buckwheat-tablet-desktop@2x.png 2x">
+                  <img class="list-item__image" src="./images/500-buckwheat-mobile@1x.png" srcset="./images/500-buckwheat-mobile@2x.png 2x" width="68" height="78" alt="Cat energy pro 500 г гречка">
+                </picture>
+              </a>
+              <div class="list-item__wrapper">
+                <h3 class="list-item__title">Cat energy slim 500 г</h3>
+                <div class="list-item__desc-wrapper">
+                  <table class="list-item__desc">
+                    <tr>
+                      <td class="list-item__desc-title">Масса</td>
+                      <td class="list-item__desc-content">500 г</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Вкус</td>
+                      <td class="list-item__desc-content">Гречка</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Цена</td>
+                      <td class="list-item__desc-content">400 ₽</td>
+                    </tr>
+                  </table>
+                </div>
               </div>
+              <a class="list-item__link-order" href="#">Заказать</a>
             </div>
-            <a class="list-item__link-order" href="#">Заказать</a>
           </li>
           <li class="catalog__item list-item">
-            <a class="list-item__link" href="#" aria-label="ссылка на cat energy slim 1000 г гречка">
-              <picture>
-                <source width="172" height="196" type="image/png" media="(min-width: 1440px)" srcset="./images/1000-buckwheat-desktop@1x.png 1x, ./images/1000-buckwheat-desktop@2x.png 2x">
-                <source width="168" height="200" type="image/png" media="(min-width: 768px)" srcset="./images/1000-buckwheat-tablet@1x.png 1x, ./images/1000-buckwheat-tablet@2x.png 2x">
-                <img class="list-item__image" src="./images/1000-buckwheat-mobile@1x.png" srcset="./images/1000-buckwheat-mobile@2x.png 2x" width="84" height="100" alt="Cat energy pro 1000 г гречка">
-              </picture>
-            </a>
-            <div class="list-item__wrapper">
-              <h3 class="list-item__title">Cat energy slim 1000 г</h3>
-              <div class="list-item__desc-wrapper">
-                <table class="list-item__desc">
-                  <tr>
-                    <td class="list-item__desc-title">Масса</td>
-                    <td class="list-item__desc-content">1000 г</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Вкус</td>
-                    <td class="list-item__desc-content">Гречка</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Цена</td>
-                    <td class="list-item__desc-content">700 ₽</td>
-                  </tr>
-                </table>
+            <div class="catalog__item-wrapper">
+              <a class="list-item__link" href="#" aria-label="ссылка на cat energy slim 1000 г гречка">
+                <picture>
+                  <source width="172" height="196" type="image/png" media="(min-width: 1440px)" srcset="./images/1000-buckwheat-desktop@1x.png 1x, ./images/1000-buckwheat-desktop@2x.png 2x">
+                  <source width="168" height="200" type="image/png" media="(min-width: 768px)" srcset="./images/1000-buckwheat-tablet@1x.png 1x, ./images/1000-buckwheat-tablet@2x.png 2x">
+                  <img class="list-item__image" src="./images/1000-buckwheat-mobile@1x.png" srcset="./images/1000-buckwheat-mobile@2x.png 2x" width="84" height="100" alt="Cat energy pro 1000 г гречка">
+                </picture>
+              </a>
+              <div class="list-item__wrapper">
+                <h3 class="list-item__title">Cat energy slim 1000 г</h3>
+                <div class="list-item__desc-wrapper">
+                  <table class="list-item__desc">
+                    <tr>
+                      <td class="list-item__desc-title">Масса</td>
+                      <td class="list-item__desc-content">1000 г</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Вкус</td>
+                      <td class="list-item__desc-content">Гречка</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Цена</td>
+                      <td class="list-item__desc-content">700 ₽</td>
+                    </tr>
+                  </table>
+                </div>
               </div>
+              <a class="list-item__link-order" href="#">Заказать</a>
             </div>
-            <a class="list-item__link-order" href="#">Заказать</a>
           </li>
           <li class="catalog__item list-item">
-            <a class="list-item__link" href="#" aria-label="ссылка на cat energy slim 500 г рис">
-              <picture>
-                <source width="163" height="174" type="image/png" media="(min-width: 768px)" srcset="./images/500-rice-tablet-desktop@1x.png 1x, ./images/500-rice-tablet-desktop@2x.png 2x">
-                <img class="list-item__image" src="./images/500-rice-mobile@1x.png" srcset="./images/500-rice-mobile@2x.png 2x" width="72" height="84" alt="Cat energy pro 500 г рис">
-              </picture>
-            </a>
-            <div class="list-item__wrapper">
-              <h3 class="list-item__title">Cat energy slim 500 г</h3>
-              <div class="list-item__desc-wrapper">
-                <table class="list-item__desc">
-                  <tr>
-                    <td class="list-item__desc-title">Масса</td>
-                    <td class="list-item__desc-content">500 г</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Вкус</td>
-                    <td class="list-item__desc-content">Рис</td>
-                  </tr>
-                  <tr>
-                    <td class="list-item__desc-title">Цена</td>
-                    <td class="list-item__desc-content">500 ₽</td>
-                  </tr>
-                </table>
+            <div class="catalog__item-wrapper">
+              <a class="list-item__link" href="#" aria-label="ссылка на cat energy slim 500 г рис">
+                <picture>
+                  <source width="163" height="174" type="image/png" media="(min-width: 768px)" srcset="./images/500-rice-tablet-desktop@1x.png 1x, ./images/500-rice-tablet-desktop@2x.png 2x">
+                  <img class="list-item__image" src="./images/500-rice-mobile@1x.png" srcset="./images/500-rice-mobile@2x.png 2x" width="72" height="84" alt="Cat energy pro 500 г рис">
+                </picture>
+              </a>
+              <div class="list-item__wrapper">
+                <h3 class="list-item__title">Cat energy slim 500 г</h3>
+                <div class="list-item__desc-wrapper">
+                  <table class="list-item__desc">
+                    <tr>
+                      <td class="list-item__desc-title">Масса</td>
+                      <td class="list-item__desc-content">500 г</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Вкус</td>
+                      <td class="list-item__desc-content">Рис</td>
+                    </tr>
+                    <tr>
+                      <td class="list-item__desc-title">Цена</td>
+                      <td class="list-item__desc-content">500 ₽</td>
+                    </tr>
+                  </table>
+                </div>
               </div>
+              <a class="list-item__link-order" href="#">Заказать</a>
             </div>
-            <a class="list-item__link-order" href="#">Заказать</a>
           </li>
         </ul>
         <div class="catalog__more">
@@ -329,11 +343,13 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__wrapper footer__wrapper--catalog">
-      <p class="footer__invite">Приглашаем к сотрудничеству дилеров!</p>
-      <address class="footer__address">ул. Большая Конюшенная, д. 19/8
-        <span class="footer__address-town">Санкт-Петербург</span>
-      </address>
+    <div class="footer__contacts footer__contacts--catalog">
+      <div class="footer__wrapper footer__wrapper--catalog">
+        <p class="footer__invite">Приглашаем к сотрудничеству дилеров!</p>
+        <address class="footer__address">ул. Большая Конюшенная, д. 19/8
+          <span class="footer__address-town">Санкт-Петербург</span>
+        </address>
+      </div>
     </div>
     <div class="footer__map-container">
       <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991047846933!2d30.32050837715263!3d59.9387941749152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0xa24b26c0d196de71!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1754684041879!5m2!1sen!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" onerror="this.closest('.footer__map-container').classList.add('footer__map-container--error')">

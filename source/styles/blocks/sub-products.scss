@@ -7,22 +7,23 @@
   align-items: center;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 0 30px;
+    max-width: 768px;
+    margin: 0 auto;
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 0 70px;
     margin-bottom: 96px;
+    max-width: 1440px;
   }
 }
 
 .sub-products__wrapper {
-  width: 100%;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
 
   @media screen and (min-width: $tablet-width) {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -34,6 +35,7 @@
 
   @media screen and (min-width: $tablet-width) {
     padding: 0;
+    min-width: 708px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -41,6 +43,8 @@
     display: flex;
     gap: 80px;
     flex-flow: row wrap;
+    min-width: 1221px;
+    padding-left: 40px;
   }
 }
 
@@ -49,7 +53,8 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
-  padding: 13px 40px 13px 20px;
+  padding: 0 40px 0 20px;
+  margin: 0 0 35px;
   position: relative;
   background-color: $base-accent-color-text;
   inline-size: fit-content;
@@ -103,7 +108,7 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    margin-bottom: 75px;
+    margin-bottom: 70px;
 
     li:first-child .sub-products__item-title::before {
       content: none;
@@ -128,7 +133,7 @@
   @media screen and (min-width: $tablet-width) {
     border: 1px solid $base-color-border;
     border-bottom: none;
-    padding: 26px 38px 28px;
+    padding: 26px 37px 27px;
     flex-flow: row wrap;
     justify-content: space-between;
 
@@ -160,13 +165,14 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $base-title-color-text;
-  margin-top: 0;
+  margin: 0 0 12px;
   padding-top: 13px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
     margin-bottom: 25px;
+    padding-top: 0;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -204,6 +210,11 @@
   justify-content: space-between;
 }
 
+td.sub-products__desc,
+td.sub-products__price {
+  padding: 0;
+}
+
 .sub-products__link-order {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -213,6 +224,7 @@
   text-align: center;
 
   @include often-button;
+  @include button-condition;
 
   @media screen and (min-width: $tablet-width) {
     min-width: 100%;
@@ -226,7 +238,7 @@
   position: relative;
 
   @media screen and (min-width: $tablet-width) {
-    min-width: 707px;
+    max-width: 707px;
     padding: 71px 125px 69px 0;
     justify-content: end;
   }

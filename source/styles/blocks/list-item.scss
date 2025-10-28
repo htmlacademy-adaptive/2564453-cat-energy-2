@@ -6,7 +6,7 @@
 
   @media screen and (min-width: $tablet-width) {
     min-width: 250px;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -16,7 +16,10 @@
 
 .list-item__link {
   min-width: 140px;
-  text-align: center;
+  min-height: 107px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: $tablet-width) {
     display: flex;
@@ -31,7 +34,19 @@
     min-width: 169px;
     margin-bottom: 12px;
   }
+
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  .catalog__item:hover & {
+    transform: scale(1.05);
+  }
+
+  .catalog__item:active & {
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+  }
 }
+
 
 .list-item__title {
   font-family: "Oswald", sans-serif;
@@ -41,6 +56,7 @@
   color: $base-title-color-text;
   max-width: 76px;
   margin: 0 0 14px;
+  text-transform: uppercase;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 20px;
@@ -67,6 +83,7 @@
   @media screen and (min-width: $tablet-width) {
     border-bottom: 1px solid $base-color-border;
     padding-bottom: 5px;
+    padding-top: 3px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -110,6 +127,7 @@
   margin-top: 17px;
 
   @include often-button();
+  @include button-condition;
 
   @media screen and (min-width: $tablet-width) {
     margin-top: 0;

@@ -1,6 +1,5 @@
 @use "../common/variables.scss" as *;
 @use "../common/mixins.scss" as *;
-@use "../blocks/social-list.scss" as *;
 
 .footer__invite {
   font-family: "Oswald", sans-serif;
@@ -40,7 +39,6 @@
 
   @media screen and (min-width: $desktop-width) {
     text-align: start;
-    gap: 19px;
   }
 }
 
@@ -52,8 +50,18 @@
 
   @include decorative-line;
 
+  &:hover .footer__logo-text {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(80%);
+  }
+
+  &:active .footer__logo-text {
+    filter: brightness(0) saturate(100%) invert(42%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+  }
+
+
   @media screen and (min-width: $tablet-width) {
     width: 128px;
+    height: 24px;
     padding: 0;
 
     &::after {
@@ -78,33 +86,62 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  @media screen and (min-width: $tablet-width) {
+    background-color: $base-accent-color-background;
+  }
+}
+
+.footer--catalog {
+  background-color: $base-accent-color-background;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+
+  @media screen and (min-width: $tablet-width) {
+    background-color: $base-accent-color-text;
+  }
+}
+
+.footer__contacts--catalog {
+  background-color: $base-accent-color-background;
 }
 
 .footer__wrapper {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  min-width: 100%;
+  min-width: 320px;
   padding: 26px 20px;
   background-color: $base-accent-color-text;
   z-index: 5;
 
   @media screen and (min-width: $tablet-width) {
-    min-width: 100%;
+    min-width: 768px;
     padding: 60px 70px;
   }
 
   @media screen and (min-width: $desktop-width) {
     position: absolute;
     min-width: 565px;
+    padding: 60px 79px;
     top: 95px;
-    left: 110px;
+    left: 50%;
+    transform: translateX(calc(-50% - 327px));
   }
 }
 
 .footer__wrapper--catalog {
   @media screen and (max-width: $desktop-width) {
     background-color: $base-accent-color-background;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    background-color: $base-accent-color-text;
   }
 }
 
@@ -127,6 +164,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 66px 110px;
+    max-width: 1440px;
   }
 }
 
@@ -138,13 +181,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  min-width: 280px;
 
   @media screen and (min-width: $tablet-width) {
-    width: 168px;
+    min-width: 168px;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      filter: brightness(0) saturate(100%) invert(55%) sepia(96%) saturate(368%) hue-rotate(61deg) brightness(97%) contrast(87%);
+      transition: all 0.2s ease;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: all 0.2s ease;
   }
 }
-
 /* карты */
 
 .footer__map-container {
