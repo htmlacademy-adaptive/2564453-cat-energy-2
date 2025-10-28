@@ -13,8 +13,9 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding: 0 110px 69px;
+    padding: 0 106px 69px 110px;
     margin: 0;
+    border-bottom: none;
   }
 }
 
@@ -29,7 +30,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    min-width: 100%;
+    min-width: 1220px;
     padding-right: 0;
     justify-content: space-between;
   }
@@ -41,6 +42,12 @@
   line-height: 40px;
   font-weight: 400;
   margin: 0 0 40px;
+
+  @media screen and (min-width: $desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
 }
 
 .how-it-works__list {
@@ -58,6 +65,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     counter-reset: step-counter;
+    gap: 37px;
   }
 
   @media screen and (min-width: $desktop-width) {

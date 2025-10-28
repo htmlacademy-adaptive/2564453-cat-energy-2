@@ -2,21 +2,54 @@
 @use "../common/mixins.scss" as *;
 
 .main-header__wrapper {
+  max-width: 320px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 21px 12px 20px;
+  padding: 13px 21px 14px 20px;
 
   @media screen and (min-width: $tablet-width) {
-    padding: 25px 34px 25px 30px;
+    max-width: 768px;
+    padding: 25px 33px 25px 30px;
+    margin: 0 auto;
+    align-items: end;
   }
 
   @media screen and (min-width: $desktop-width) {
+    max-width: 1440px;
     padding: 55px 110px 0;
     margin-bottom: 0;
   }
 }
 
+.main-header__logo {
+  height: 38px;
+
+  &:hover {
+    transition: opacity 0.3s ease;
+    opacity: 0.8;
+  }
+
+  &:active {
+    transition: opacity 0.3s ease;
+    opacity: 0.6;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    height: 50px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    height: 59px;
+  }
+}
+
 .main-header {
   position: relative;
+  border-bottom: 1px solid $decoration-line;
+
+  @media screen and (min-width: $tablet-width) {
+    border: none;
+  }
 }
