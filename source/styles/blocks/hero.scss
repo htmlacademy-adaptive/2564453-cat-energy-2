@@ -28,10 +28,15 @@
   height: 302px;
 
   @include hero-background("../../images/index-background-kitten-mobile@1x.jpg");
+  background-size: auto, 320px auto, auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @include hero-background("../../images/index-background-kitten-mobile@2x.jpg");
+    background-size: auto, 320px auto, auto;
+  }
 
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: auto;
   z-index: -1;
 
   @media screen and (min-width: $tablet-width) {
@@ -48,6 +53,11 @@
     min-height: 100vw;
 
     @include hero-background("../../images/index-background-kitten-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @include hero-background("../../images/index-background-kitten-desktop@2x.jpg");
+      background-size: auto, 720px auto, auto;
+    }
 
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -78,6 +88,7 @@
 }
 
 .hero__title {
+  font-family: "Oswald", "Arial Narrow", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -120,7 +131,7 @@
 }
 
 .hero__nutrition-program {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -155,20 +166,25 @@
   }
 }
 
-.hero__wrapper picture img {
+.hero__hero-image {
+  width: 280px;
+  height: 270px;
   display: block;
   margin-bottom: 3px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 0;
+    width: 709px;
+    height: 609px;
+  }
 
   @media screen and (min-width: $desktop-width) {
     position: absolute;
     order: 10;
     left: 448px;
     top: 0;
-    width: auto;
-  }
-
-  @media screen and (min-width: $tablet-width) {
-    margin-bottom: 0;
+    width: 552px;
+    height: 499px;
   }
 }
 

@@ -87,6 +87,24 @@
     &--current {
       @include navigation-border;
     }
+
+    &--index-current {
+      @include navigation-border;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    &--index {
+      color: $base-accent-color-text;
+
+      &.main-navigation__link--current {
+        @include navigation-border($border-color:$base-accent-color-text);
+      }
+    }
+
+    &--index-current {
+      @include navigation-border($base-accent-color-text);
+    }
   }
 
   &:hover {
@@ -168,4 +186,96 @@
   height: 2px;
   background-color: $icon-basic-black;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* без JavaScript */
+
+.main-navigation__checkbox {
+  display: none;
+}
+
+.main-navigation__toggle-link {
+  display: none;
+}
+
+.page.no-js {
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation__toggle-link {
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 24px;
+      height: 24px;
+      padding: 2px 0 4px;
+      background: $base-accent-color-text;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+      &:hover {
+        transition: opacity 0.3s ease;
+        opacity: 0.6;
+      }
+
+      &:active {
+        transition: opacity 0.3s ease;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.main-navigation__toggle-link-icon {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $icon-basic-black;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.page.no-js .main-navigation__list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.page.no-js .main-navigation__checkbox:checked ~ .main-navigation__list {
+  @media screen and (max-width: 767px) {
+    opacity: 1;
+    display: block;
+    transform: translateY(0);
+  }
+}
+
+.page.no-js .main-navigation__checkbox:checked ~ .main-navigation__toggle-link {
+  @media screen and (max-width: 767px) {
+    transform: rotate(45deg);
+    padding: 0;
+    gap: 0;
+    width: 18px;
+    height: 18px;
+
+    .main-navigation__toggle-link-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 25px;
+      margin: 0;
+      transform: translate(-50%, -50%);
+
+      &:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+      }
+    }
+  }
 }

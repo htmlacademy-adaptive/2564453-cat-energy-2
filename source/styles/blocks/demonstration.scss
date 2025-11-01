@@ -20,6 +20,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
 
 .demonstration__demonstration-image--before {
