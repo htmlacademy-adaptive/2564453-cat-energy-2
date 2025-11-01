@@ -2,7 +2,7 @@
 @use "../common/mixins.scss" as *;
 
 .footer__invite {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -234,7 +234,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  display: none;
   z-index: 1;
   overflow: hidden;
 }
@@ -243,7 +242,6 @@
 
 .footer__map-fallback-image {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
 }

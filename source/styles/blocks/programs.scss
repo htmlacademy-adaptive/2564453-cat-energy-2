@@ -28,7 +28,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    max-width: 100%;
+    max-width: 1220px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -48,7 +48,7 @@
 
   @media screen and (min-width: $desktop-width) {
     gap: 80px;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
@@ -121,7 +121,7 @@
 }
 
 .programs__list-title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", "Arial", sans-serif;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;

@@ -1,4 +1,5 @@
-/* в этот файл добавляет скрипты*/
+
+document.documentElement.classList.remove('no-js');
 
 document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.main-navigation__toggle');

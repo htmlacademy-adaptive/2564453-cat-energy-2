@@ -49,7 +49,7 @@
 }
 
 .sub-products__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -159,7 +159,7 @@
 }
 
 .sub-products__item-title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -216,7 +216,7 @@ td.sub-products__price {
 }
 
 .sub-products__link-order {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -261,6 +261,10 @@ td.sub-products__price {
 
   @include gift-background("../../images/catalog-background-gift-mobile@1x.jpg");
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @include gift-background("../../images/catalog-background-gift-mobile@2x.jpg");
+  }
+
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -269,12 +273,20 @@ td.sub-products__price {
   @media screen and (min-width: $tablet-width) {
     @include gift-background("../../images/catalog-background-gift-tablet@1x.jpg");
     height: 200px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @include gift-background("../../images/catalog-background-gift-tablet@2x.jpg");
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
     height: 288px;
 
     @include gift-background("../../images/catalog-background-gift-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @include gift-background("../../images/catalog-background-gift-desktop@2x.jpg");
+    }
   }
 }
 
