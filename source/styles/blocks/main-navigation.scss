@@ -2,7 +2,7 @@
 @use "../common/mixins.scss" as *;
 
 .main-navigation__list {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial Narrow", "Arial", sans-serif;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
@@ -189,7 +189,6 @@
 }
 
 /* без JavaScript */
-
 .main-navigation__checkbox {
   display: none;
 }
@@ -207,14 +206,16 @@
     @media screen and (max-width: 767px) {
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      width: 24px;
-      height: 24px;
-      padding: 2px 0 4px;
       background: $base-accent-color-text;
       cursor: pointer;
       position: relative;
       transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+      transform: rotate(45deg);
+      padding: 0;
+      gap: 0;
+      width: 18px;
+      height: 18px;
 
       &:hover {
         transition: opacity 0.3s ease;
@@ -237,14 +238,27 @@
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
-.page.no-js .main-navigation__list {
+.page.no-js .main-navigation__toggle-link .main-navigation__toggle-link-icon {
   @media screen and (max-width: 767px) {
-    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    margin: 0;
+    transform: translate(-50%, -50%);
+
+    &:nth-child(1) {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
   }
 }
 
-.page.no-js .main-navigation__checkbox:checked ~ .main-navigation__list {
+.page.no-js .main-navigation__list {
   @media screen and (max-width: 767px) {
     opacity: 1;
     display: block;
@@ -252,29 +266,32 @@
   }
 }
 
+.page.no-js .main-navigation__checkbox:checked ~ .main-navigation__list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
 .page.no-js .main-navigation__checkbox:checked ~ .main-navigation__toggle-link {
   @media screen and (max-width: 767px) {
-    transform: rotate(45deg);
-    padding: 0;
-    gap: 0;
-    width: 18px;
-    height: 18px;
+    transform: rotate(0deg);
+    padding: 2px 0 4px;
+    gap: 6px;
+    width: 24px;
+    height: 24px;
 
     .main-navigation__toggle-link-icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 25px;
-      margin: 0;
-      transform: translate(-50%, -50%);
+      position: static;
+      width: 100%;
+      transform: none;
 
       &:nth-child(1) {
-        transform: translate(-50%, -50%) rotate(90deg);
+        transform: none;
       }
 
       &:nth-child(2) {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+        transform: none;
       }
     }
   }

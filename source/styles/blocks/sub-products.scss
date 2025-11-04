@@ -261,7 +261,7 @@ td.sub-products__price {
 
   @include gift-background("../../images/catalog-background-gift-mobile@1x.jpg");
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  @media (min-resolution: 2dppx) {
     @include gift-background("../../images/catalog-background-gift-mobile@2x.jpg");
   }
 
@@ -274,7 +274,7 @@ td.sub-products__price {
     @include gift-background("../../images/catalog-background-gift-tablet@1x.jpg");
     height: 200px;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: 2dppx) {
       @include gift-background("../../images/catalog-background-gift-tablet@2x.jpg");
     }
   }
@@ -284,7 +284,7 @@ td.sub-products__price {
 
     @include gift-background("../../images/catalog-background-gift-desktop@1x.jpg");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: 2dppx) {
       @include gift-background("../../images/catalog-background-gift-desktop@2x.jpg");
     }
   }
