@@ -53,3 +53,9 @@
     border: none;
   }
 }
+
+.page.no-js .main-header {
+  @media screen and (max-width: 767px) {
+    border-bottom: none;
+  }
+}
